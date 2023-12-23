@@ -5,7 +5,10 @@
 
 <!-- ![mockup](images/mockup.png) -->
 
-Finance app with transactions and graphs
+Webstore for my small art business
+
+Mockup:
+https://www.figma.com/file/fkk0nwg2vMDLuynsFqmKYW/Ecommerce?type=design&node-id=0-1&mode=design&t=oMlISIhHn1Gv2nVi-0
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
