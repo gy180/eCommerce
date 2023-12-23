@@ -35,7 +35,8 @@ How to be able to use it
    ```sh
    git clone https://github.com/gy180/eCommerce.git
    ```
-2. Download the data needed at https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/data
+2. Download the data needed at https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/data 
+   The folder must be named "data" instead of "archive"
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
