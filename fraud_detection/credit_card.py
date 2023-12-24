@@ -130,15 +130,17 @@ loss_func = nn.BCELoss()
 
 # training loop
 epoch_num = 20
+model.train()
 for epoch in range(0, epoch_num):
-    model.train()
-    for transaction in train_dataloader:
+    for idx, transaction in enumerate(train_dataloader):
         input = transaction[:, :-1]
-        actual = transaction[:, -1]
+        actual = transaction[:,-1]
+        print("actual", actual.shape())
 
         optimizer.zero_grad()
         output = model(input)
-        loss = loss_func(output, actual)
+        print("output", output.shape())
+        loss = loss_func(output, torch.reshape(actual,(64,1)))
         loss.backward()
         optimizer.step()
 
