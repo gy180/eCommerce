@@ -5,7 +5,6 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 import torch.nn as nn
 import torch.optim as optim
-from sklearn.model_selection import train_test_split
 
 def remove_outliers(dataset, idx_set):
     """
@@ -46,8 +45,11 @@ class CreditCardDataSet(Dataset):
         # make data more balanced
         if rnd == 0:
             rnd_lst = self.fraud
+            upper = int(len(self.fraud) *0.75)
+        else:
+            upper = int(len(self.not_fraud)*0.75)
 
-        rnd_idx = random.randint(0,len(rnd_lst))
+        rnd_idx = random.randint(0,upper)
 
         return torch.tensor(rnd_lst.iloc[rnd_idx].values.astype(np.float32))
     
@@ -96,18 +98,16 @@ fraud_df = pd.DataFrame(fraud, columns=headers)
 not_fraud_df = pd.DataFrame(not_fraud, columns=headers)
 
 # split into training and testing data sets
-train_size = 0.75
-fraud_train, fraud_test = train_test_split(fraud_df, train_size=train_size, shuffle=True)
-not_fraud_train, not_fraud_test = train_test_split(fraud_df, train_size=train_size, shuffle=True)
+# train_size = 0.75
+# fraud_train, fraud_test = train_test_split(fraud_df, train_size=train_size, shuffle=True)
+# not_fraud_train, not_fraud_test = train_test_split(fraud_df, train_size=train_size, shuffle=True)
 
 # create DataSets
-train_dataset = CreditCardDataSet(fraud_train, not_fraud_train)
-test_dataset = CreditCardDataSet(fraud_test, not_fraud_test)
+train_dataset = CreditCardDataSet(fraud_df, not_fraud_df)
 
 # create DataLoaders
 batch_size = 64
 train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-test_dataloader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
 # creating the neural network model
 input_size = len(df.columns) - 1
@@ -125,7 +125,7 @@ for epoch in range(0, epoch_num):
     model.train()
     for transaction in train_dataloader:
         input = transaction[:, :-1]
-        actual = transaction[:, -1:]
+        actual = transaction[:, -1]
 
         optimizer.zero_grad()
         output = model(input)
