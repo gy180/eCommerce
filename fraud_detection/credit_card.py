@@ -30,6 +30,12 @@ def remove_outliers(dataset, idx_set):
 class CreditCardDataSet(Dataset):
     """Credit Card Fraud dataset"""
     def __init__(self, fraud, not_fraud):
+        """
+        Initialize the dataset
+        Input:
+            -fraud: dataframe representing the fraud data
+            -not_fraud: dataframe rerpesenting the data that aren't classified as fraud
+        """
         self.fraud = fraud
         self.not_fraud = not_fraud
     
@@ -56,6 +62,14 @@ class CreditCardDataSet(Dataset):
 class FraudDetectionModel(nn.Module):
     """model that the machine is trained on"""
     def __init__(self, input_size, hidden_size, output_size):
+        """
+        Initalize the fraud detection model
+
+        Input:
+            -input_size: an int, which is the number of input features
+            -hidden_size: an int representing num of units in the hidden feature
+            -output_size: an int representing the number of output features
+        """
         super(FraudDetectionModel,self).__init__()
         self.model = nn.Sequential(
             nn.Linear(input_size, hidden_size),
@@ -97,11 +111,6 @@ for idx in range(0, len(df['Class'])-len(idx_outliers)):
 fraud_df = pd.DataFrame(fraud, columns=headers)
 not_fraud_df = pd.DataFrame(not_fraud, columns=headers)
 
-# split into training and testing data sets
-# train_size = 0.75
-# fraud_train, fraud_test = train_test_split(fraud_df, train_size=train_size, shuffle=True)
-# not_fraud_train, not_fraud_test = train_test_split(fraud_df, train_size=train_size, shuffle=True)
-
 # create DataSets
 train_dataset = CreditCardDataSet(fraud_df, not_fraud_df)
 
@@ -120,7 +129,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.0001)
 loss_func = nn.BCELoss()
 
 # training loop
-epoch_num = 50
+epoch_num = 20
 for epoch in range(0, epoch_num):
     model.train()
     for transaction in train_dataloader:
