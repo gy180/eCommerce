@@ -17,19 +17,49 @@ def remove_outliers(dataset, idx_set):
     Returns a set of indices that represent what needs to be removed
     """
     outlier_idx = idx_set
-    mean_val = np.mean(dataset)
-    std_dev = np.std(dataset)
-    
-    #find the indices (it is an outlier when it is over 3 standard dev from mean)
-    for idx in range(0,len(dataset)):
-        if mean_val - 3*std_dev > dataset[idx] or dataset[idx] > mean_val + 3*std_dev:
-            outlier_idx.add(idx)
+    # mean_val = np.mean(dataset)
+    # std_dev = np.std(dataset)
+    # lower_bound, upper_bound = mean_val - 3*std_dev, mean_val + 3*std_dev
 
+    #box and whiskers 
+    quartile25, quartile75 = np.percentile(dataset, 25), np.percentile(dataset,75)
+    interquart_range = quartile75 - quartile25
+    cutoff = interquart_range*1.75
+    lower_bound, upper_bound = quartile25 - cutoff, quartile75+cutoff
+
+    #iterate through data set and find the outliers
+    for idx in range(0,len(dataset)):
+        if lower_bound > dataset[idx] or dataset[idx] > upper_bound:
+            outlier_idx.add(idx)
+    
     return outlier_idx
+
+def validate(set, model):
+    """
+    check if the model is training and if its improving
+    Input:
+        -set: represents the validation set
+        -model: the trained model
+    Returns the ratio of correct predictions over all predictions
+    """
+    input = set[:, :-1]
+    actual = set[:, -1].tolist()
+    predicted = model(input).view(-1).tolist()
+    rounded_predicted = [float(round(pred)) for pred in predicted]
+    print("actual", actual)
+    print("predicted", rounded_predicted)
+
+    correct = 0
+    for pred, act in zip(actual, rounded_predicted):
+        if pred == act:
+            correct += 1
+    
+    ratio = correct/len(set)
+    return ratio
 
 class CreditCardDataSet(Dataset):
     """Credit Card Fraud dataset"""
-    def __init__(self, fraud, not_fraud):
+    def __init__(self, fraud, not_fraud, batch_len):
         """
         Initialize the dataset
         Input:
@@ -38,14 +68,16 @@ class CreditCardDataSet(Dataset):
         """
         self.fraud = fraud
         self.not_fraud = not_fraud
+        self.batch_len = batch_len
     
     def __len__ (self):
         """returns the length of the dataset"""
-        return len(self.fraud) + len(self.not_fraud)
+        total_len = len(self.fraud) + len(self.not_fraud)
+        return  total_len - (total_len% self.batch_len)
     
     def __getitem__(self, index):
         """returns a random row in df"""
-        rnd = random.randint(0, 3)
+        rnd = random.randint(0, 1)
         rnd_lst = self.not_fraud
 
         # make data more balanced
@@ -71,10 +103,15 @@ class FraudDetectionModel(nn.Module):
             -output_size: an int representing the number of output features
         """
         super(FraudDetectionModel,self).__init__()
+        hidden_size2 = int(hidden_size*2/3) + output_size
         self.model = nn.Sequential(
             nn.Linear(input_size, hidden_size),
+            nn.BatchNorm1d(hidden_size),
             nn.ReLU(),
-            nn.Linear(hidden_size, output_size),
+            nn.Linear(hidden_size, hidden_size2),
+            nn.BatchNorm1d(hidden_size2),
+            nn.ReLU(),
+            nn.Linear(hidden_size2, output_size),
             nn.Sigmoid()
         )
     
@@ -95,14 +132,14 @@ for idx in range(1,len(headers)-2):
 
 # remove the rows that include the outliers
 filtered = df.values.tolist()
-idx_outliers = idx_outliers = sorted(outliers, reverse=True)
+idx_outliers = sorted(outliers, reverse=True)
 for idx in idx_outliers:
     filtered.pop(idx)
 
 # separate the fraud and non fraud data
 fraud = []
 not_fraud = []
-for idx in range(0, len(df['Class'])-len(idx_outliers)):
+for idx in range(0, len(filtered)):
     if filtered[idx][-1] == 0:
         not_fraud.append(filtered[idx])
     else:
@@ -111,39 +148,45 @@ for idx in range(0, len(df['Class'])-len(idx_outliers)):
 fraud_df = pd.DataFrame(fraud, columns=headers)
 not_fraud_df = pd.DataFrame(not_fraud, columns=headers)
 
-# create DataSets
-train_dataset = CreditCardDataSet(fraud_df, not_fraud_df)
-
-# create DataLoaders
+# create DataSets and DataLoaders (training)
 batch_size = 64
+train_dataset = CreditCardDataSet(fraud_df, not_fraud_df, batch_size)
 train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 
 # creating the neural network model
 input_size = len(df.columns) - 1
 output_size = 1
-hidden_size = int(input_size*2/3) + output_size
+hidden_size = int(input_size*3/4) + output_size
 model = FraudDetectionModel(input_size, hidden_size, output_size)
 
 # optimizer and loss function
-optimizer = optim.Adam(model.parameters(), lr=0.0001)
+optimizer = optim.Adam(model.parameters(), lr=0.001)
 loss_func = nn.BCELoss()
+
+# creating the validation set
+# validation_set = torch.tensor(fraud[0:401] + not_fraud[0:401])
+validation_set = torch.tensor(fraud[0:401] + not_fraud[0:401], dtype=torch.float32)
+print(validation_set.shape)
 
 # training loop
 epoch_num = 20
 model.train()
 for epoch in range(0, epoch_num):
-    for idx, transaction in enumerate(train_dataloader):
+    for transaction in train_dataloader:
         input = transaction[:, :-1]
         actual = transaction[:,-1]
-        print("actual", actual.shape())
 
+        # optimize and backpropogate
         optimizer.zero_grad()
         output = model(input)
-        print("output", output.shape())
         loss = loss_func(output, torch.reshape(actual,(64,1)))
         loss.backward()
         optimizer.step()
 
-    #validation
-    model.eval()
-    
+    #validate the data
+    if (epoch + 1)%10 == 0:
+        print(validate(validation_set, model))
+
+
+# test_set = torch.tensor(fraud[int(len(fraud)*0.75):] + not_fraud[int(len(not_fraud*0.75)):])
+# print(validate(test_set, model))
