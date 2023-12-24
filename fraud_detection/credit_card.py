@@ -183,10 +183,10 @@ for epoch in range(0, epoch_num):
         loss.backward()
         optimizer.step()
 
-    #validate the data
-    if (epoch + 1)%10 == 0:
-        print(validate(validation_set, model))
+    # #validate the data
+    # if (epoch + 1)%10 == 0:
+    #     print(validate(validation_set, model))
 
 
-# test_set = torch.tensor(fraud[int(len(fraud)*0.75):] + not_fraud[int(len(not_fraud*0.75)):])
-# print(validate(test_set, model))
+test_set = torch.tensor(fraud[int(len(fraud)*0.75):] + not_fraud[int(len(not_fraud)*0.75):])
+print(validate(test_set, model))
