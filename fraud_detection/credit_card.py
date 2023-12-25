@@ -121,7 +121,7 @@ class FraudDetectionModel(nn.Module):
 df = pd.read_csv('creditcard.csv')
 information = df.values.tolist()
 
-# find all the outliers
+# preprocessing
 headers = list(df.columns)
 not_fraud_outliers = set()
 fraud_outliers = set()
@@ -135,6 +135,7 @@ for idx in range(0, len(df)):
     else:
         fraud.append(information[idx])
 
+#find the outliers for the fraud set and the non fraud set
 for idx in range(1,len(headers)-2):
     not_fraud_data = [not_fraud[i][idx] for i in range(len(not_fraud))]
     fraud_data = [fraud[i][idx] for i in range(len(fraud))]
@@ -144,9 +145,10 @@ for idx in range(1,len(headers)-2):
 not_fraud_outlier_idx = sorted(not_fraud_outliers, reverse=True)
 fraud_outlier_idx = sorted(fraud_outliers, reverse=True)
 
+# remove the outliers
 for idx in not_fraud_outlier_idx:
     not_fraud.pop(idx)
-
+    
 for idx in fraud_outlier_idx:
     fraud.pop(idx)
 
@@ -169,7 +171,6 @@ optimizer = optim.Adam(model.parameters(), lr=0.0001)
 loss_func = nn.BCELoss()
 
 # creating the validation set
-# validation_set = torch.tensor(fraud[0:401] + not_fraud[0:401])
 validation_set = torch.tensor(fraud[int(len(fraud)*0.75):] + not_fraud[int(len(not_fraud)*0.75):int(len(not_fraud)*0.75)+100])
 
 # training loop
