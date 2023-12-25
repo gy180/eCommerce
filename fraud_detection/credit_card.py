@@ -118,7 +118,7 @@ class FraudDetectionModel(nn.Module):
 
 
 # reading/extracting data from the file
-df = pd.read_csv('creditcard.csv')
+df = pd.read_csv('data/creditcard.csv')
 information = df.values.tolist()
 
 # preprocessing
@@ -194,4 +194,4 @@ for epoch in range(0, epoch_num):
     
 
 test_set = torch.tensor(fraud[int(len(fraud)*0.75):] + not_fraud[int(len(not_fraud)*0.75):])
-print(validate(test_set, model))
+print("Test:", validate(test_set, model))
