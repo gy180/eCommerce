@@ -1,0 +1,178 @@
+body {
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Racing Sans One', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbfbfb; 
+    min-width: 900px;
+    opacity: 0; 
+    transition: opacity 0.8s ease-in-out; 
+}
+
+/* header */
+header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    opacity: 0; 
+    transition: opacity 0.8s ease-in-out;
+}
+
+header h6{
+    position: absolute;
+    display: flex;
+    width: fit-content;
+}
+
+header button{
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#searchIcon {
+    position: absolute;
+    scale: 65%;
+    top: 15px;
+    margin-left: 120px;
+}
+
+.profile-icon{
+    position: absolute;
+    scale: 65%;
+    top: 15px;
+    margin-left: 160px;
+}
+
+.cart-icon{
+    position: absolute;
+    scale: 65%;
+    top: 15px;
+    margin-left: 200px;
+}
+
+/* font */
+h1 {
+    color: #000;
+    text-align: center;
+    font-family: Racing Sans One;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10%;
+}
+
+h6{
+    color: #0F0F15;
+    font-family: Outfit;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+/* main body */
+main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.home-screen {
+    position: relative;
+    scale: 70%;
+    height: 0px;
+    margin-left: 5%;
+    margin-right: 5%;
+    align-items: center;
+}
+
+.welcome{
+    position: absolute;
+    scale: 90%;
+    left: -100px;
+    top: -60px;
+    align-content: left;
+}
+
+.backImage {
+    position: absolute;
+    scale:95%;
+    right: 0;
+    opacity: 100%;
+    align-items: center;
+}
+
+.backTone{
+    scale:95%;
+    opacity: 60%;
+    mix-blend-mode: soft-light;
+}
+
+.backHam {
+    position: absolute;
+    scale: 90%;
+    top: 0px;
+    right: -150px;
+}
+
+/* small menu thing */
+.menu{
+    position: absolute;
+    left: -160px;
+    top: 600px;
+}
+
+nav h6{
+    position: absolute;
+    width: fit-content;
+    top: -50px;
+    left: 350px;
+}
+
+.shop-link{
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    left: 17.5%;
+}
+
+.about-link{
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    left: 35%;
+}
+
+nav h6:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color: #FFCFCF;
+}
+
+.right-corner{
+    position: absolute;
+    stroke-width: 6px;
+    stroke: #572301;
+    width: 61px;
+    height: 58px;
+    flex-shrink: 0;
+    top: 750px;
+    right: -10px;
+}
+
+.left-corner{
+    position: absolute;
+    stroke-width: 4px;
+    stroke: #572301;
+    width: 43px;
+    height: 41px;
+    flex-shrink: 0;
+    left: 0px;
+    top: 60px;
+}

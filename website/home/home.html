@@ -4,13 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hami Tree</title>
-        <link rel = "icon" href = "../images/hami.png" >
-        <link rel="stylesheet" href="style.css" type="text/css" media="only screen">
+        <link rel = "icon" href = "../images/logo2.png" >
+        <link rel="stylesheet" href="../style.css" type="text/css" media="only screen">
+        <link rel="stylesheet" href="home.css" type="text/css" media="only screen">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 
-        <style type="text/css">
-            
-        </style>
+        <style type="text/css"></style>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,28 +17,73 @@
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Racing+Sans+One&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="Heading">
-            <div class="Title">
-                <h1>HAMI TREE</h1>
+        <header>
+            <h1>HAMI TREE</h1>
+            <div class="mini-menu">
+                <button id="searchIcon">
+                    <img src="home-images/search.png" alt="search">
+                </button>
+                <form action="../other_pages/profile.html" method="GET">
+                    <button class="profile-icon">
+                        <img src="home-images/profile.png" alt="profile">
+                    </button>
+                </form>
+                <form action="../cart/cart.html" method="get">
+                    <button class="cart-icon">
+                        <img src="home-images/cart.png" alt="cart"> 
+                    </button>
+                </form>
             </div>
-            <div class="Mini-Menu">
-                <img src="HomeImages/icons.png" alt="RightCornerMenu"> 
+            <div class="navigation">
+                <nav>
+                    <!-- insert the naviation links via hyper link <a href ="/path/"><a> -->
+                </nav>
             </div>
-        </div>
-        <div class="Home">
-            <div class="Welcome">
-                <img src="HomeImages/welcome group.png" alt="WelcomePic">
-            </div>
-            <div class="Background">
-                <img src="HomeImages/Rectangle 3.png" alt="BackTone">
-                <img src="HomeImages/backgroundmask.png" class="BackImage">
-                <div class="BackHam">
-                    <img src="HomeImages/hamhamham.png">
+        </header>
+        <main>
+            <section class="home-screen">
+                <!-- the background (w/ ham, decor, etc) -->
+                <div class="welcome">  
+                    <img src="home-images/welcome group.png" alt="welcomePic">
                 </div>
-            </div>
-        </div>
+                <img src="home-images/backgroundmask.png" class="backImage">
+                <img src="home-images/Rectangle 3.png" class="backTone">
+                <div class="backHam">
+                    <img src="home-images/hamhamham 1.png">
+                </div>
+                <svg class="right-corner" xmlns="http://www.w3.org/2000/svg" width="64" height="67" viewBox="0 0 64 67" fill="none">
+                    <path d="M3 64L61 64L61 3L46.6852 3L47.8676 48.8955L3 48.8955L3 64Z" stroke="#572301" stroke-width="6" stroke-miterlimit="10"/>
+                </svg>
+                <svg class="left-corner" xmlns="http://www.w3.org/2000/svg" width="45" height="47" viewBox="0 0 45 47" fill="none">
+                    <path d="M43 2L2 2L2 45L12.1191 45L11.2832 12.6475L43 12.6475L43 2Z" stroke="#572301" stroke-width="4" stroke-miterlimit="10"/>
+                </svg>
+
+                <!-- the white navigation/menu bar -->
+                <div class="menu">
+                    <img src="home-images/menu.png" class="navi1">
+                    <nav>
+                        <h6>Home</h6>
+                        <a href="../shop/shop.html" class = "shop-link">
+                            <h6>Shop</h6>
+                        </a>
+                        <a href="../other_pages/about.html" class="about-link">
+                            <h6>About</h6>
+                        </a>
+                    </nav>
+                </div>
+            </section>
+
+            <section class="shop">
+            </section>
+
+            <section class="About">
+            </section>
+            
+        </main>
         <footer>
 
         </footer>
+        <script src="script.js"></script>
+        <script src="../general.js"></script>
     </body>
 </html>
