@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hami Tree</title>
         <link rel = "icon" href = "../images/logo2.png" >
-        <link rel="stylesheet" href="style.css" type="text/css" media="only screen">
+        <link rel="stylesheet" href="../style.css" type="text/css" media="only screen">
+        <link rel="stylesheet" href="shop.css" type="text/css" media="only screen">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 
         <style type="text/css"></style>
@@ -17,15 +18,44 @@
     </head>
     <body>
         <header>
-            <div class="header">
+            <div class="main-header">
+            <div class="navigation">
                 <form action="../home/home.html" method="get">
-                    <button>
+                    <button type="submit" class="home-logo">
                         <img src="../images/logo.png" alt="logo">
                     </button>
                 </form>
+                <a href="../home/home.html">
+                    <h6 class="home-menu">Home</h6>
+                </a>
+                <a href="../shop/shop.html" class="shop-menu">
+                    <h6>Shop</h6>
+                </a>
+                <a href="../other_pages/about.html" class="about-menu">
+                    <h6>About</h6>
+                </a>
+                <div class="icons">
+                    <button id="searchButton">
+                        <img src="../images/menu_search.png" alt="search">
+                    </button>
+                    <form action="../other_pages/profile.html" method="get">
+                        <button type="submit" class="profile-button">
+                            <img src="../images/menu_profile.png" alt="profile">
+                        </button>
+                    </form>
+                    <form action="../cart/cart.html" method="get">
+                        <button type="submit" class="cart-button">
+                            <img src="../images/menu_carty.png" alt="carty">
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
             </div>
         </header>
-        
+        <main>
+            
+        </main>
         <footer>
 
         </footer>

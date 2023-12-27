@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fbfbfb; 
-    min-width: 900px;
+    min-width: 800px;
     opacity: 0; 
     transition: opacity 0.8s ease-in-out; 
 }
@@ -17,6 +17,25 @@ header{
     width: 100%;
     opacity: 0; 
     transition: opacity 0.8s ease-in-out;
+}
+
+/* font */
+h1 {
+    color: #000;
+    text-align: center;
+    font-family: Racing Sans One;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10%;
+}
+
+h6{
+    color: #0F0F15;
+    font-family: Outfit;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
 }
 
 /* animation */
