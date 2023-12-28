@@ -4,9 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fbfbfb; 
-    min-width: 800px;
+    min-width: 900px;
     opacity: 0; 
-    transition: opacity 0.8s ease-in-out; 
+    transition: opacity 0.8s ease-in-out;
 }
 
 header{
@@ -30,12 +30,31 @@ h1 {
     line-height: 10%;
 }
 
+h2{
+    color: #000;
+    text-align: center;
+    font-family: Racing Sans One;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10%;
+}
+
 h6{
     color: #0F0F15;
     font-family: Outfit;
     font-style: normal;
     font-weight: 500;
     line-height: 100%;
+}
+
+p{
+    color: #410000;
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 /* animation */

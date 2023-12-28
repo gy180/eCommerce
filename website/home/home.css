@@ -100,25 +100,72 @@ main {
     align-content: left;
 }
 
-.backImage {
-    position: absolute;
-    scale:95%;
-    right: 0;
-    opacity: 100%;
-    align-items: center;
+.background{
+    margin-top: 20px;
+    margin-left: 25px;
+    width: 975.65px;
+    height: 836px;
+    overflow: hidden;
 }
 
+.img-product {
+    display: block;
+    position: relative;
+    width: 140%;
+    height: auto;
+    z-index:-1;
+    opacity: 80%;
+    overflow: hidden;
+    transform: translate(-220px, -480px);
+    filter: blur(7px) saturate(110%) contrast(110%);
+    box-shadow: 6px 6px 6px 0px #3D0000 inset;
+}
+
+.text1{
+    position: absolute;
+    overflow: hidden; 
+    top: -190px;
+    left: -25px;
+    align-items: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Racing Sans One;
+    font-size: 237px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: -12.5px;
+    white-space: nowrap;
+    opacity: 0.8;
+    mix-blend-mode: plus-lighter;
+    filter: blur(2px);
+    clip-path: polygon(5% 10%, 100% 0, 100% 100%, 5% 100%);
+}
+    
+
+/* .backImage {
+    position: relative;
+    scale:95%;
+    opacity: 100%;
+    left: 0px;
+    align-items: center;
+} */
+
 .backTone{
+    position: absolute;
     scale:95%;
     opacity: 60%;
+    align-items: center;
+    left: 0px;
     mix-blend-mode: soft-light;
+    top: 0px;
 }
 
 .backHam {
     position: absolute;
     scale: 90%;
-    top: 0px;
-    right: -150px;
+    top: 15px;
+    right: -170px;
 }
 
 /* small menu thing */
@@ -133,6 +180,7 @@ nav h6{
     width: fit-content;
     top: -50px;
     left: 350px;
+    cursor: pointer;
 }
 
 .shop-link{
@@ -163,7 +211,7 @@ nav h6:hover{
     height: 58px;
     flex-shrink: 0;
     top: 750px;
-    right: -10px;
+    right: -25px;
 }
 
 .left-corner{
@@ -177,127 +225,218 @@ nav h6:hover{
     top: 60px;
 }
 
+/* featured items section */
 .shop {
     position: absolute;
     align-items: center;
     justify-content: center;
-    left: 5.5%;
-    top: 315px;
-    scale: 70%;
+    width: 100%;
+    margin-top: 1255px;
+    height: 0;
 }
 
 #rectangle{
     position: relative;
-    top: 300px;
-    width: 1300px;
-    height: 650px;
-    left: -150px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 500px;
     background:#C5DDFF;
 }
 
-.shopDesign {
+.pattern-header{
     position: absolute;
-    scale: 90%;
-    align-items: center;
-    left: -52px;
+    width: 900px;
     top: 20px;
 }
 
-.owlPin {
+.featured-text {
+    position: absolute;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+} 
+
+.featured-items{
     position: relative;
-    scale: 90%;
-    top: 225px;
-    left: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 900px;
+    height: 0px;
+    top: 70px;
+}
+
+.owlPin {
+    position: absolute;
+    scale: 65%;
+    left: -50px;
 }
 
 .catPin {
-    position: relative;
-    scale: 90%;
-    align-self: center;
-    justify-content: center;
-    top: 225px;
-    left: 50px;
+    position: absolute;
+    scale: 65%;
 }
 
 .moreItems {
-    position: relative;
-    scale: 90%;
-    align-self: right;
-    justify-content: right;
-    top: 225px;
-    left: 50px;
+    position: absolute;
+    scale: 65%;
+    right: -50px;
 }
 
 .pattern-design-1 {
     position: absolute;
-    right: -20px;
-    bottom: -135px;
-    scale: 75%;
+    right: -80px;
+    bottom: -300px;
+    scale: 70%;
 }
 
-.About {
+/* about section */
+.about {
     position: absolute;
-    top: 1025px;
+    top: 1128px;
+    width: 800px;
+    height: 400px;
 }
 
 .about-description {
     position: relative;
-    scale: 60%;
-    left: -25%;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 260px;
+    flex-shrink: 0;
+    left: -30px;
+    background: #F6F1F1;
+    margin-top: 65px;
+    padding: 5px;
+}
+
+.about-description h2{
+    position: absolute;
+    top: 25px;
+    left: 40px;
+}
+
+.about-description p{
+    position: absolute;
+    left: 70px;
+    bottom: 70px;
 }
 
 .contact-us {
-    position: relative;
-    top: -160px;
-    left: 10px;
+    position: absolute;
     scale: 55%;
+    left: 80px;
+    bottom: 20px;
 }
 
 .more-info {
-    position: relative;
-    top: -160px;
-    left: -100px;
+    position: absolute;
     scale: 55%;
+    right: 0px;
+    bottom: 20px;
+}
+
+.logo-about{
+    position: absolute;
+    right: -160px;
+    scale: 15%;
+    bottom: -105px;
 }
 
 .socials {
     position: relative;
-    scale: 85%;
-    top: -405px;
-    left: 200px;
-}
-
-.links {
-    position: absolute;
-    scale: 85%;
-    width: 0px;
-    display: block;
-    justify-content: center;
     align-items: center;
-    top: 20px;
-    right: 450px;
+    justify-content: center;
+    top: -280px;
+    right: -540px;
+    width: 280px;
+    height: 270px;
+    padding: 5px;
 }
 
-.linkTree {
-    position: relative;
-    top: -10px;
-    left: -10px;
-}
-
-.etsy {
-    position: relative;
-    top: -14px;
-    left: 5px;
-}
-
-.email {
-    position: relative;
-    top: -5px;
+.socials h2{
+    position: absolute;
     left: 0px;
 }
 
-.featured-text {
+.links {
     position: relative;
-    scale: 150%;
-    top: -180px;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    top: 70px;
+    left:20px
+}
+
+a{
+    text-decoration: none;
+}
+
+.ig{
+    position: absolute;
+    scale: 85%;
+    top: 0px;
+}
+
+.ig p{
+    position: absolute;
+    text-decoration: none;
+    font-size: 17px;
+    left: 76px;
+    top: -7px;
+    white-space: nowrap;
+}
+
+.linkTree {
+    position: absolute;
+    left: -5px;
+    scale: 85%;
+    top: 50px;
+}
+
+.linkTree p{
+    position: absolute;
+    font-size: 17px;
+    white-space: nowrap;
+    left: 81px;
+    top: -7px;
+}
+
+.etsy {
+    position: absolute;
+    top: 105px;
+    left: 2px;
+    scale: 80%;
+}
+
+.etsy p{
+    position: absolute;
+    font-size: 18px;
+    top: -12px;
+    left: 78px;
+    white-space: nowrap;
+}
+
+.email {
+    position: absolute;
+    scale: 85%;
+    top: 155px;
+    left: -3px;
+}
+
+.email p{
+    position: absolute;
+    top: -12px;
+    left: 80px;
+    font-size: 17px;
+}
+
+.links p:hover{
+    text-decoration: underline;
 }
