@@ -118,7 +118,6 @@ main {
     overflow: hidden;
     transform: translate(-220px, -480px);
     filter: blur(7px) saturate(110%) contrast(110%);
-    box-shadow: 6px 6px 6px 0px #3D0000 inset;
 }
 
 .text1{
