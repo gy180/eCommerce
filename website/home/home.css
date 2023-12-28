@@ -176,3 +176,122 @@ nav h6:hover{
     left: 0px;
     top: 60px;
 }
+
+.shop {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    left: 5.5%;
+    top: 315px;
+    scale: 70%;
+}
+
+#rectangle{
+    position: relative;
+    top: 300px;
+    width: 1300px;
+    height: 650px;
+    left: -150px;
+    background:#C5DDFF;
+}
+
+.shopDesign {
+    position: absolute;
+    scale: 90%;
+    align-items: center;
+    left: -52px;
+    top: 20px;
+}
+
+.owlPin {
+    position: relative;
+    scale: 90%;
+    top: 225px;
+    left: 50px;
+}
+
+.catPin {
+    position: relative;
+    scale: 90%;
+    align-self: center;
+    justify-content: center;
+    top: 225px;
+    left: 50px;
+}
+
+.moreItems {
+    position: relative;
+    scale: 90%;
+    align-self: right;
+    justify-content: right;
+    top: 225px;
+    left: 50px;
+}
+
+.pattern-design-1 {
+    position: absolute;
+    right: -20px;
+    bottom: -135px;
+    scale: 75%;
+}
+
+.About {
+    position: absolute;
+    top: 1025px;
+}
+
+.about-description {
+    position: relative;
+    scale: 60%;
+    left: -25%;
+}
+
+.contact-us {
+    position: relative;
+    top: -160px;
+    left: 10px;
+    scale: 55%;
+}
+
+.more-info {
+    position: relative;
+    top: -160px;
+    left: -100px;
+    scale: 55%;
+}
+
+.socials {
+    position: relative;
+    scale: 85%;
+    top: -405px;
+    left: 200px;
+}
+
+.links {
+    position: absolute;
+    scale: 85%;
+    width: 0px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 450px;
+}
+
+.linkTree {
+    position: relative;
+    top: -10px;
+    left: -10px;
+}
+
+.etsy {
+    position: relative;
+    top: -14px;
+    left: 5px;
+}
+
+.email {
+    position: relative;
+    top: -5px;
+    left: 0px;
+}
