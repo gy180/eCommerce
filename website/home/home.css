@@ -235,7 +235,7 @@ nav h6:hover{
 }
 
 #rectangle{
-    position: relative;
+    position: absolute;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -246,7 +246,7 @@ nav h6:hover{
 
 .pattern-header{
     position: absolute;
-    width: 900px;
+    width: 180%;
     top: 20px;
 }
 
@@ -439,3 +439,22 @@ a{
 .links p:hover{
     text-decoration: underline;
 }
+
+.subscribe {
+    position: relative;
+    align-items: center;
+    max-width: 100%;
+    top: 1525px;
+    width: 100%;
+    height: 814px;
+}
+
+.subscribe h1 {
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -50%;
+    scale: 80%;
+} 
