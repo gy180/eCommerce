@@ -295,3 +295,9 @@ nav h6:hover{
     top: -5px;
     left: 0px;
 }
+
+.featured-text {
+    position: relative;
+    scale: 150%;
+    top: -180px;
+}
