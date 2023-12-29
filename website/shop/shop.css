@@ -1,4 +1,4 @@
-.main-header{
+#main-header{
     position: fixed;
     display: flex;
     align-items: center;
@@ -10,68 +10,9 @@
     background-color: white;
     box-shadow: 0px 3px 3px 0px rgba(48, 33, 33, 0.10);
     z-index: 100;
-}
+} 
 
-#navigation{
-    position: relative;
-    height: 0;
-    margin-left: 5%;
-    margin-right: 5%;
-    scale: 90%;
-    align-items: center;
-
-}
-
-.home-logo{
-    position: absolute;
-    border: none;
-    background-color: transparent;
-    left: -480px;
-    top: -30px;
-    cursor: pointer;
-}
-
-a{
-    position: absolute;
-    text-decoration: none;
-}
-
-#navigation h6{
-    position: absolute;
-    font-size: 20px;
-    color: #410000;
-    top: -60px;
-    left: -350px;
-}
-
-.shop-menu{
-    position: absolute;
-    left: 85px;
-}
-
-.about-menu{
-    position: absolute;
-    left: 170px;
-}
-
-.icons button{
-    position: absolute;
-    right: -450px;
-    top: -20px;
-    border: none;
-    background-color: transparent;
-}
-
-#searchButton{
-    left: 170px;
-    bottom: -20px;
-}
-
-.profile-button{
-    left: 290px;
-    bottom: -20px;
-    scale: 110%;
-}
+/* rest of header information in general.css */
 
 .background{
     width: 100%;
