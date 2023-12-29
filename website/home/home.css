@@ -327,6 +327,7 @@ nav h6:hover{
     background: #F6F1F1;
     margin-top: 65px;
     padding: 5px;
+    box-shadow: 0px 3px 3px 0px rgba(65, 54, 54, 0.1);
 }
 
 .about-description h2{
