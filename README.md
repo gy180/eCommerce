@@ -62,12 +62,13 @@ Mockup: [Figma Mockup](https://www.figma.com/file/fkk0nwg2vMDLuynsFqmKYW/Ecommer
 
 - User-friendly interface for browsing and purchasing products
 - Shopping cart functionality for easy order management
+- More features are still coming, as this is a work in progress
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contributing
 
 We welcome contributions! If you would like to contribute let us know or fork the repo
-
-## Contact Us
 
 You contact us via social media (found in the link tree)
 
