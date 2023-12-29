@@ -1,7 +1,5 @@
 # Hami Tree eCommerce Website
 
-## About The Project
-
 Welcome to the Hami Tree eCommerce Website! This platform serves as the digital storefront for our small art business, Hami Tree. For more information visit our [linktree](https://hamitree.carrd.co/)
 
 ## Table of Contents
