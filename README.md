@@ -1,6 +1,6 @@
 # Hami Tree eCommerce Website
 
-Welcome to the Hami Tree eCommerce Website! This platform serves as the digital storefront for our small art business, Hami Tree. For more information visit our [linktree](https://hamitree.carrd.co/)
+Welcome to the Hami Tree eCommerce Website! This platform serves as the digital storefront for our small art business, Hami Tree. For more information visit our [linktree](https://hamitree.carrd.co/).
 
 ## Table of Contents
 - [Overview](#overview)
@@ -9,7 +9,6 @@ Welcome to the Hami Tree eCommerce Website! This platform serves as the digital 
 - [Project Structure](#project-structure)
 - [Features](#features)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 Our Small Business Ecommerce Website is a web application developed to showcase and sell our products online. It incorporates HTML, CSS, JavaScript, and Python to create an interactive and dynamic shopping experience.
