@@ -19,7 +19,7 @@ Mockup: [Figma Mockup](https://www.figma.com/file/fkk0nwg2vMDLuynsFqmKYW/Ecommer
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
+## Built With
 
 - **HTML:** Used for creating the structure and content of the web pages.
 - **CSS:** Employed for styling and layout, enhancing the visual appeal of the website.
