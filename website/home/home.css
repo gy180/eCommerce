@@ -471,7 +471,7 @@ a{
     max-width: 100%;
     top: 1525px;
     width: 100%;
-    height: 666px;
+    height: auto;
 }
 
 .subscribe-image {
@@ -479,7 +479,7 @@ a{
     position: absolute; 
     z-index: -1;
     width: 100%;
-    height: 666px;
+    height: 500px;
     overflow: hidden;
     filter: saturate(110%) contrast(110%);
     object-fit: cover;
@@ -492,7 +492,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 100px;
+    top: 50px;
     scale: 80%;
     color: white;
 } 
@@ -502,7 +502,7 @@ a{
     top: -5%;
     opacity: 0.4;
     width: 100%;
-    height: 666px;
+    height: 500px;
     flex-shrink: 0;
     background: #102252;
     mix-blend-mode: multiply;
@@ -515,7 +515,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 70px;
+    top: 20px;
     scale: 60%;
     color: white;
 } 
@@ -527,9 +527,53 @@ a{
     justify-content: center;
 }
 
-.subscribe p {
+
+.email {
     position: relative;
-    margin: 150px 20px 0 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: -35px;
+}
+
+.email input{
+    font-size: 100%;
+    outline: none;
+    border: 5px solid rgb(221, 221, 221);
+    background: transparent;
+    opacity: 0.8;
+    border-radius: 3px;
+    width: 400px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-family: Outfit;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 50%;
+    color: white;
+    padding-left: 10px;
+}
+
+.email input::placeholder {
+    position: absolute;
+    color: white;
+    font-family: Outfit;
+    top: 5px;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 50%;
+    left: 10px;
+}
+
+.subscribe a {
+    position: relative;
+    margin: 10px 20px 0 20px;
+}
+
+.subscribe p {
     color: white;
     font-size: medium;
 }
@@ -543,14 +587,14 @@ a{
 
 .subscribe-icons a {
     position: relative;
-    margin: 50px 20px 0 20px;
+    margin: -15 20px 0 20px;
 }
 
 .footer-line {
     position: relative;
     width: 100%;
     height: 3px;
-    bottom: -75px;
+    bottom: -50px;
     background-color: white;
     box-shadow: 0px 3px 3px rgba(121, 121, 121, 0.25);
 }
@@ -560,5 +604,9 @@ a{
     width: 50%;
     scale: 80%;
     color: white;
-    top: -7%;
+    top: 50px;
+}
+
+.subscribe p:hover{
+    text-decoration: underline;
 }
