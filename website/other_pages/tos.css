@@ -1,0 +1,102 @@
+#main-header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    width: 100%;
+    min-width: 900px;
+    height: 75px;
+    background-color: white;
+    box-shadow: 0px 3px 3px 0px rgba(48, 33, 33, 0.10);
+    z-index: 100;
+} 
+
+/* rest of header information in general.css */
+
+.patterns{
+    position: relative;
+    width: 100%;
+    min-width: 900px;
+    height: auto;
+    margin-top: 90px;
+}
+
+
+.main-body{
+    margin-top: 70px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+}
+
+.main-body h1{
+    color: #410000;
+    margin-left: -300px;
+}
+
+.content{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.q1{
+    position:absolute;
+    top: -20px;
+    color: #410000;
+
+}
+
+.a1{
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    text-align: justify;
+    color: #410000;
+
+}
+
+.q2{
+    position: absolute;
+    top: 340px;
+    color: #410000;
+}
+
+.a2{
+    color: #410000;
+    position: absolute;
+    top:380px;
+    width: 100%;
+    text-align: justify;
+}
+
+.q3{
+    position: absolute;
+    top: 460px;
+    color: #410000;
+}
+
+.a3{
+    position: absolute;
+    top:500px;
+    width: 100%;
+    text-align: justify;
+}
+
+.general{
+    position: absolute;
+    top:560px;
+}
+
+.contact-button{
+    position: absolute;
+    top: 570px;
+    left: 350px;
+    scale: 0.6;
+}
+

@@ -17,3 +17,6 @@ document.getElementById('xOut').addEventListener('click', function() {
     document.getElementById('navigation').style.display = 'block';
     document.getElementById('searchBar').style.display = 'none';
 });
+
+//sign in ? https://uiverse.io/Yaya12085/short-panda-24?username=&password=
+// https://www.w3schools.com/howto/howto_js_popup_form.asp

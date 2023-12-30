@@ -1,0 +1,25 @@
+#main-header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    width: 100%;
+    min-width: 900px;
+    height: 75px;
+    background-color: white;
+    box-shadow: 0px 3px 3px 0px rgba(48, 33, 33, 0.10);
+    z-index: 100;
+} 
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hami Tree • About</title>
+        <link rel = "icon" href = "../images/logo2.png" >
+        <link rel="stylesheet" href="../style.css" type="text/css" media="only screen">
+        <link rel="stylesheet" href="item.css" type="text/css" media="only screen">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <style type="text/css"></style>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="main-header">
+                <div id="navigation">
+                     <form action="../home/home.html" method="get">
+                        <button type="submit" class="home-logo">
+                            <img src="../images/logo.png" alt="logo">
+                        </button>
+                    </form>
+                    <a href="../home/home.html">
+                        <h6 class="home-menu">Home</h6>
+                    </a>
+                    <a href="../shop/shop.html" class="shop-menu">
+                        <h6>Shop</h6>
+                    </a>
+                    <a href="../other_pages/about.html" class="about-menu">
+                        <h6>About</h6>
+                    </a>
+                    <div class="icons">
+                        <button id="searchButton">
+                            <img src="../images/menu_search.png" alt="search">
+                        </button>
+                        <form action="../other_pages/profile.html" method="get">
+                            <button type="submit" class="profile-button">
+                                <img src="../images/menu_profile.png" alt="profile">
+                            </button>
+                        </form>
+                        <form action="../cart/cart.html" method="get">
+                            <button type="submit" class="cart-button">
+                                <img src="../images/menu_carty.png" alt="carty">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="searchBar">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search" name="search" required="" autocomplete="off">
+                        <button type="submit" id="searchButtonIcon"><img src="../images/menu_search.png"></button>
+                    </form>
+                    <button id="xOut">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="3.42859" width="4.84873" height="29.0924" rx="2.42436" transform="rotate(-45 0 3.42859)" fill="#9A3939"/>
+                            <rect width="4.84873" height="29.0924" rx="2.42436" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 24 3.42859)" fill="#9A3939"/>
+                        </svg>   
+                    </button> 
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="item-info">
+                <div class="photos">
+                    <div class="img1">
+
+                    </div>
+                    <div class="img2">
+
+                    </div>
+                    <div class="img3">
+
+                    </div>
+                </div>
+                <div class="item-about">
+                    <h5 class="category-item">C ategory</h5>
+                    <h2 class="item-name">Title</h2>
+                    <h4 class="cost"></h4>
+                    <p>Shipping calculated at checkout</p>
+                </div>
+                <div id="quantity">
+                    <button id="minus">-</button>
+                    <input type="number" min="1" max="20" id="quantity-input" value="1">
+                    <button id="plus">+</button>
+                </div>
+                <div class="descriptions">
+                    <h6 class="des-title"></h6>
+                    <p class="d es-info"></p>
+
+                    <h6 class="shipping-title"></h6>
+                    <p class="shipping-info"></p>
+                </div>
+            </section>
+            <section class="recommendations">
+                <h2>You May Also Like </h2>
+                <div id="rec1">
+
+                </div>
+                <div class="rec2"></div>
+                <div class="rec3"></div>
+            </section>
+        </main>
+
+        <footer>
+
+        </footer>
+        
+        <script src="../general.js"></script>
+    </body>
+</html>
