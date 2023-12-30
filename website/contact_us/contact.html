@@ -97,23 +97,26 @@
             </div>
             <section class="contact">
                 <h1>CONTACT US</h1>
-                <form id="inputs" action="#" method="POST" enctype="multipart/form-data">
+                <form id="inputs" action="process_form.php" method="POST" enctype="multipart/form-data" id="contactForm">
                     <div class="name">
-                        <input id="name-input" type="text" required="" autocomplete="off">
+                        <input id="nameInput" type="text" name="name" required="" autocomplete="off">
                         <label for="name">Name *</label>
                     </div>
                     <div class="email">
-                        <input id="email-input" type="text" required="" autocomplete="off">
+                        <input id="emailInput" type="text" name="email" required="" autocomplete="off">
                         <label for="email">Email *</label>
                     </div>
                     <div class="subject">
-                        <input id="subject-input" type="text" required="" autocomplete="off">
-                        <label for="subject">Subject</label>
+                        <input id="subjectInput" type="text" name="subject" required="" autocomplete="off">
+                        <label for="subject">Subject *</label>
                     </div>
                     <div class="message">
-                        <textarea id="message-input" required="" autocomplete="off"></textarea>
+                        <textarea id="messageInput" required="" name="message" autocomplete="off"></textarea>
                         <label for="message">Message *</label>
                     </div>
+                    <button id="submitButton" type="submit">
+                        <h5>Send</h5>
+                    </button>
                 </form>
                 
             </section>
