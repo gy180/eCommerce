@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hami Tree • Shop</title>
+        <title>Hami Tree • Contact Us</title>
         <link rel = "icon" href = "../images/logo2.png" >
         <link rel="stylesheet" href="../style.css" type="text/css" media="only screen">
-        <link rel="stylesheet" href="shop.css" type="text/css" media="only screen">
+        <link rel="stylesheet" href="contact.css" type="text/css" media="only screen">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 
         <style type="text/css"></style>
@@ -67,10 +67,10 @@
         </header>
         <main>
             <div class="background">
-                <img src="../images/product_img.png" class="img-product">
+                <img src="../images/hamWallpaper.png" class="img-product">
                 <div class="container">
                     <div class="box"></div>
-                    <h1>HAMI TREE SHOP</h1>
+                    <h1>CONTACT US</h1>
                 </div>
                 <svg width="1440" height="36" viewBox="0 0 1440 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1405.47 26.3414C1402 26.3414 1399.19 28.4858 1399.19 31.1308C1399.19 33.7759 1402 35.92 1405.47 35.92C1408.93 35.92 1411.74 33.7759 1411.74 31.1308C1411.74 28.4858 1408.93 26.3414 1405.47 26.3414Z" fill="#A26262" fill-opacity="0.2"/>
@@ -95,13 +95,28 @@
                     <path d="M2.59009 9.57867L1437.41 9.5788C1438.84 9.5788 1440 8.67277 1440 7.55512L1440 2.02383C1440 0.906189 1438.84 0.000159162 1437.41 0.000159037L2.59009 3.36012e-05C1.15967 3.34762e-05 7.58183e-07 0.906063 6.60476e-07 2.02371L1.76915e-07 7.555C7.92077e-08 8.67264 1.15967 9.57867 2.59009 9.57867Z" fill="#A26262" fill-opacity="0.2"/>
                     </svg> 
             </div>
-            <section class="shop-headers">
-                <div class="category">
-                    <h1>SHOP ALL</h1>
-                </div>
-                <div id = "subheader"></div>
+            <section class="contact">
+                <h1>CONTACT US</h1>
+                <form id="inputs" action="#" method="POST" enctype="multipart/form-data">
+                    <div class="name">
+                        <input id="name-input" type="text" required="" autocomplete="off">
+                        <label for="name">Name *</label>
+                    </div>
+                    <div class="email">
+                        <input id="email-input" type="text" required="" autocomplete="off">
+                        <label for="email">Email *</label>
+                    </div>
+                    <div class="subject">
+                        <input id="subject-input" type="text" required="" autocomplete="off">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="message">
+                        <textarea id="message-input" required="" autocomplete="off"></textarea>
+                        <label for="message">Message *</label>
+                    </div>
+                </form>
+                
             </section>
-            <section class="shop-contents"></section>
         </main>
 
         <footer>

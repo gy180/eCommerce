@@ -1,0 +1,188 @@
+#main-header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    width: 100%;
+    min-width: 900px;
+    height: 75px;
+    background-color: white;
+    box-shadow: 0px 3px 3px 0px rgba(48, 33, 33, 0.10);
+    z-index: 100;
+} 
+
+.background{
+    position: relative;
+    width: 100%;
+    min-width: 900px;
+    height: auto;
+    overflow: hidden;
+}
+
+.img-product {
+    display: block;
+    position: absolute; 
+    z-index: -1;
+    width: 100%;
+    min-width: 900px;
+    height: 700px;
+    filter: contrast(110%);
+    object-fit: cover;
+}
+
+.container{
+    margin-top: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    width: 100%;
+    height: 100px;
+    flex-shrink: 0;
+    opacity: 0.9;
+    background: #8F7272;
+    mix-blend-mode: multiply;
+    align-items: center;
+}
+
+.background h1{
+    margin-top: -50px;
+    position: absolute;
+    color: white;
+    white-space: nowrap;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.background svg{
+    margin-top: 310px;
+    width: 100%;
+}
+
+.contact{
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 1000px;
+}
+
+.contact h1{
+    color: #410000;
+    margin-left: -530px;
+}
+
+#inputs {
+    font-family: Outfit;
+    width: 900px;   
+    scale: 90%;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 25px;
+  }
+
+.name{
+    position: absolute;
+    left: 0px;
+}
+  
+.name input {
+    font-size: 100%;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background: #F6F1F1;
+    opacity: 0.6;
+    border-radius: 3px;
+    width: 400px;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+#inputs label {
+    font-size: 17px;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+}
+
+.email{
+    position: absolute;
+    right:0px
+}
+
+.email input{
+    font-size: 100%;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background: #F6F1F1;
+    opacity: 0.6;
+    border-radius: 3px;
+    width: 400px;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.subject{
+    position: absolute;
+    top: 60px;
+}
+
+.subject input{
+    font-size: 100%;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background: #F6F1F1;
+    opacity: 0.6;
+    border-radius: 3px;
+    width: 866px;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.message{
+    position: absolute;
+    top: 120px;
+}
+
+.message textarea{
+    font-size: 100%;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background: #F6F1F1;
+    opacity: 0.6;
+    border-radius: 3px;
+    width: 866px;
+    height: 200px;
+    padding: 15px;
+
+}
+
+#inputs :is(input:focus, input:valid)~label {
+    transform: translateY(-90%) scale(.8);
+    background-color: #fbfbfb;
+}
+
+#inputs :is(input:focus, input:valid) {
+    border-color: rgb(200, 150, 152);
+}
+
+#inputs textarea:focus + label,
+#inputs textarea:valid + label {
+    transform: translateY(-90%) scale(.8);
+    background-color: #fbfbfb;
+}
+
+#inputs textarea:focus,
+#inputs textarea:valid {
+    border-color: rgb(200, 150, 152);
+}
