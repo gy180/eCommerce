@@ -479,7 +479,7 @@ a{
     position: absolute; 
     z-index: -1;
     width: 100%;
-    height: 410px;
+    height: 450px;
     overflow: hidden;
     filter: saturate(110%) contrast(110%);
     object-fit: cover;
@@ -491,7 +491,7 @@ a{
     top: -5%;
     opacity: 0.4;
     width: 100%;
-    height: 410px;
+    height: 450px;
     flex-shrink: 0;
     background: #102252;
     mix-blend-mode: multiply;
@@ -504,7 +504,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 60px;
+    top: 80px;
     scale: 80%;
     color: white;
     font-size: 45px;
@@ -517,7 +517,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 30px;
+    top: 50px;
     scale: 60%;
     color: white;
     font-size: 25px;
@@ -529,6 +529,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+    top: 20px;
 }
 
 .email {
@@ -536,7 +537,7 @@ a{
     align-items: center;
     justify-content: center;
     display: flex;
-    top: -10px;
+    top: 10px;
 }
 
 .email input{
@@ -587,6 +588,7 @@ a{
     align-items: center;
     justify-content: center;
     scale: .7;
+    top: 40px;
 }
 
 .subscribe-icons a {
@@ -598,7 +600,7 @@ a{
     position: relative;
     width: 100%;
     height: 3px;
-    bottom: -40px;
+    bottom: -80px;
     background-color: white;
     box-shadow: 0px 3px 3px rgba(121, 121, 121, 0.25);
 }
@@ -608,7 +610,7 @@ a{
     width: 50%;
     scale: 80%;
     color: white;
-    top: 45px;
+    bottom: -90px;
 }
 
 .subscribe a:hover{

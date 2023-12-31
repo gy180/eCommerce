@@ -12,6 +12,22 @@
     z-index: 100;
 } 
 
+.curr-page{
+    position: absolute;
+    z-index: -1;
+    width: 115px;
+    height: 70px;
+    flex-shrink: 0;
+    background-color: #f5d4d4;
+    transition: all .5s ease 0s;
+    box-shadow: 3px 2px 3px 0px rgba(110, 110, 110, 0.1);
+    left: -180px;
+    top: -40px;
+    border-radius: 3px;
+    transform: skew(-20deg);
+}
+
+
 /* rest of header information in general.css */
 
 .background{
