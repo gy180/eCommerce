@@ -117,14 +117,81 @@
     font-size: 18px;
     font-weight: 400;
     cursor: pointer;
-    margin-right: 50px;
+    margin-left: 20px;
+    margin-right: 40px;
     margin-top: 10px;
 }
 
-
-
 .shop-content{
     position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     width: 100%;
     height: 500px;
+    top: 970px;
+}
+
+.items{
+    position: relative;
+    max-width: 900px;
+    height: 500px;
+    top: 0px;
+}
+
+.items button{
+    width: 171px;
+    height: 255px;
+    background: #FFF;
+    box-shadow: 2px 3px 3px 0px rgba(145, 145, 145, 0.2);
+    border: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+.container-img{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.items img{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.bobaCat{
+    transform: scale(200%) translate(5px, 10px);
+    filter: saturate(110%) sepia(10%);
+}
+
+.bunny{
+    transform: scale(140%);
+}
+
+.owl{
+    transform: scale(250%) translate(-5px, -10px);
+    filter: brightness(110%);
+}
+
+.crow{
+    transform: scale(140%) translate(5px,0);
+    filter: brightness(110%);
+}
+
+.items h6{
+    color: #410000;
+    font-size: 16px;
+    line-height: 100%;
+    margin-top: 15px;
+}
+
+.items p{
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: -30px;
 }
