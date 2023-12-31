@@ -320,7 +320,7 @@ nav h6:hover{
 /* about section */
 .about {
     position: absolute;
-    top: 1128px;
+    top: 1136px;
     width: 800px;
     height: 400px;
 }
@@ -447,14 +447,14 @@ a{
     white-space: nowrap;
 }
 
-.email {
+.email-socials {
     position: absolute;
     scale: 85%;
     top: 155px;
     left: -3px;
 }
 
-.email p{
+.email-socials p{
     position: absolute;
     top: -12px;
     left: 80px;
@@ -471,7 +471,7 @@ a{
     max-width: 100%;
     top: 1525px;
     width: 100%;
-    height: auto;
+    height: 400px;
 }
 
 .subscribe-image {
@@ -479,11 +479,23 @@ a{
     position: absolute; 
     z-index: -1;
     width: 100%;
-    height: 500px;
+    height: 410px;
     overflow: hidden;
     filter: saturate(110%) contrast(110%);
     object-fit: cover;
     top: -5%;
+}
+
+.toner{
+    position: absolute;
+    top: -5%;
+    opacity: 0.4;
+    width: 100%;
+    height: 410px;
+    flex-shrink: 0;
+    background: #102252;
+    mix-blend-mode: multiply;
+    align-items: center;
 }
 
 .subscribe h1 {
@@ -492,22 +504,12 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 50px;
+    top: 60px;
     scale: 80%;
     color: white;
+    font-size: 45px;
 } 
 
-.toner{
-    position: absolute;
-    top: -5%;
-    opacity: 0.4;
-    width: 100%;
-    height: 500px;
-    flex-shrink: 0;
-    background: #102252;
-    mix-blend-mode: multiply;
-    align-items: center;
-}
 
 .subscribe h6 {
     position: relative;
@@ -515,9 +517,11 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 20px;
+    top: 30px;
     scale: 60%;
     color: white;
+    font-size: 25px;
+    font-weight: 400;
 } 
 
 .service-text {
@@ -527,19 +531,18 @@ a{
     justify-content: center;
 }
 
-
 .email {
     position: relative;
     align-items: center;
     justify-content: center;
     display: flex;
-    top: -35px;
+    top: -10px;
 }
 
 .email input{
     font-size: 100%;
     outline: none;
-    border: 5px solid rgb(221, 221, 221);
+    border: 2px solid rgb(221, 221, 221);
     background: transparent;
     opacity: 0.8;
     border-radius: 3px;
@@ -548,7 +551,7 @@ a{
     align-items: center;
     justify-content: center;
     font-family: Outfit;
-    font-size: 25px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 200;
     line-height: 50%;
@@ -560,8 +563,8 @@ a{
     position: absolute;
     color: white;
     font-family: Outfit;
-    top: 5px;
-    font-size: 25px;
+    top: 7px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 200;
     line-height: 50%;
@@ -570,12 +573,12 @@ a{
 
 .subscribe a {
     position: relative;
-    margin: 10px 20px 0 20px;
+    margin: 0px 20px 0 20px;
 }
 
 .subscribe p {
     color: white;
-    font-size: medium;
+    font-size: 14px;
 }
 
 .subscribe-icons {
@@ -583,6 +586,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+    scale: .7;
 }
 
 .subscribe-icons a {
@@ -594,7 +598,7 @@ a{
     position: relative;
     width: 100%;
     height: 3px;
-    bottom: -50px;
+    bottom: -40px;
     background-color: white;
     box-shadow: 0px 3px 3px rgba(121, 121, 121, 0.25);
 }
@@ -604,9 +608,10 @@ a{
     width: 50%;
     scale: 80%;
     color: white;
-    top: 50px;
+    top: 45px;
 }
 
-.subscribe p:hover{
+.subscribe a:hover{
     text-decoration: underline;
+    color: white;
 }
