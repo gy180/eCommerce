@@ -146,6 +146,11 @@ a{
     background-color: transparent;
 }
 
+.icons svg:hover path{
+    fill: #a35e5e;
+    transition: all .5s ease 0s;
+}
+
 #searchButton{
     left: 290px;
     bottom: -20px;

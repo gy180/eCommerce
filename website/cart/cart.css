@@ -243,23 +243,123 @@ input[type=number] {
     padding-left: 10px;
     font-size: 10px;
     cursor: pointer;
-    background: #B67575;
+    background: #CF8181;
     color: white;
     border-radius: 0 3px 3px 0;
 }
 
+.coupon-container button:hover{
+    background: #965a5a;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
 
 
 .checkout-cost {
     position: absolute;
-    width: 250px;
+    width: 190px;
     height: 190px;
     top: 100px;
-    right: -70px;
+    right: 5px;
     transform: translate(0, -50%);
 }
 
+.checkout-cost h4{
+    font-size: 16px;
+    color: black;
+}
 
+.item-total{
+    position: relative;
+    width: 190px;
+    height: 20px;
+}
+
+.discount{
+    position: relative;
+    width: 190px;
+    height: 20px;
+    top: -10px;
+}
+
+.line-div{
+    position: relative;
+    background: #C8B5B5;
+    width: 100%;
+    height: 2px;
+}
+
+.subtotal{
+    position: relative;
+    width: 190px;
+    height: 20px;
+    top: -15px;
+}
+
+.shipping{
+    position: relative;
+    width: 190px;
+    height: 20px;
+    top: -30px;
+}
+
+.tax{
+    position: relative;
+    width: 190px;
+    height: 20px;
+    top: -25px;
+}
+
+.subtext{
+    position: relative;
+    font-size: 10px;
+    left: 10px;
+    top: -20px;
+}
+
+.total{
+    position: relative;
+    width: 190px;
+    height: 20px;
+    top: -10px;
+}
+
+.money-cost{
+    text-align: right;
+    width: fit-content;
+    position: absolute;
+    top: -13px;
+    right: 0px;
+    font-size: 14px;
+}
+
+.checkout-btn{
+    position: relative;
+    width: 100%;
+    height: 27px;
+    font-family: Outfit;
+    color: white;
+    border-radius: 15px;
+    background: #CF8181;
+    box-shadow: 2px 2px 3px 0px rgba(105, 105, 105, 0.1);
+    border: none;
+    cursor: pointer;
+}
+
+.checkout-btn:hover{
+    background: #965a5a;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.empty-cart-message{
+    position: absolute;
+    text-align: center;
+    top: 0px;
+}
+
+.empty-cart-message p{
+    font-family: Racing Sans One;
+    font-size: 30px;
+}
 
 .subscribe {
     position: relative;
