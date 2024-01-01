@@ -24,6 +24,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  function recalculateCart(){
+
+  }
+
+  function updateQty(qtyInput){
+    
+  }
+
+  function removeItem(removeButton){
+    
+  }
+
+
   // document.addEventListener("DOMContentLoaded", function() {
   //   const items = [
   //     { id: 1, name: 'Item 1', price: 10, quantity: 1 },
