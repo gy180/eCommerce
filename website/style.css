@@ -39,6 +39,14 @@ h2{
     font-weight: 400;
     line-height: 10%;
 }
+h3{
+    color: #000;
+    font-family: Racing Sans One;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
 h4{
     color: #410000;
@@ -116,12 +124,17 @@ a{
 
 .shop-menu{
     position: absolute;
-    left: 85px;
+    left: 105px;
 }
 
 .about-menu{
     position: absolute;
-    left: 170px;
+    left: 200px;
+}
+
+#navigation h6:hover{
+    color: #a35e5e;
+    transition: all .5s ease 0s;
 }
 
 .icons button{
@@ -131,6 +144,11 @@ a{
     border: none;
     cursor: pointer;
     background-color: transparent;
+}
+
+.icons svg:hover path{
+    fill: #a35e5e;
+    transition: all .5s ease 0s;
 }
 
 #searchButton{

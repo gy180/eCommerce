@@ -18,5 +18,13 @@ document.getElementById('xOut').addEventListener('click', function() {
     document.getElementById('searchBar').style.display = 'none';
 });
 
+function redirectPage(pagePath){
+    /**
+     * On button click, page gets redirected
+     * Input: pagePath - the relative path that it'll get redirected to
+     */
+    window.location.href = pagePath
+}
+
 //sign in ? https://uiverse.io/Yaya12085/short-panda-24?username=&password=
 // https://www.w3schools.com/howto/howto_js_popup_form.asp

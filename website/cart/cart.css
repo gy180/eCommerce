@@ -1,0 +1,440 @@
+#main-header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    width: 100%;
+    min-width: 900px;
+    height: 75px;
+    background-color: white;
+    box-shadow: 0px 3px 3px 0px rgba(48, 33, 33, 0.10);
+    z-index: 100;
+} 
+
+
+/* rest of header information in general.css */
+
+.main-body{
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+
+.main-body h1{
+    color: #410000;
+    margin-left: -680px;
+    margin-top: 130px;
+}
+
+.content{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 850px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.main-body svg{
+    position: absolute;
+    scale: 0.7;
+    width: 110%;
+    top: -50px;
+    right: -140px;
+}
+
+.cart-items{
+    position: relative;
+    top: 20px;
+    width: 550px;
+    height: 400px;
+    flex-shrink: 0;
+    background: #DBEAFF;
+    box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+.info{
+    position: absolute;
+    width: 500px;
+    text-align: justify;
+}
+
+.img-container{
+    position: absolute;
+    width: 150px;
+    height: 110px;
+    overflow: hidden;
+}
+
+.img-container img{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.7) translateY(-15px);
+}
+
+.info{
+    position: absolute;
+    left: 190px;
+    top: 3px;
+    scale: 0.8;
+    width: fit-content;
+    height: fit-content;
+}
+
+#description{
+    position: absolute;
+    width: 270px;
+    top: 60px;
+    text-align: justify;
+}
+
+#cost{
+    position: absolute;
+    font-size: 20px;
+    right: -120px;
+    top: 20px;
+    font-weight: 400;
+}
+
+
+.quantity{
+    position: relative;
+    top: 85px;
+    left: 180px;
+    border: 1px solid #41000086;
+    width: 84px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.quantity input{
+    position: absolute;
+    text-align: center;
+    width: 40px;
+    left: 20px;
+    font-family: Outfit;
+    border: None;
+    height: 18px;
+}
+
+.minus-btn{
+    position: absolute;
+    border: None;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    font-family: Outfit;
+    height: 20px;
+    width: 20px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.plus-btn{
+    position:absolute;
+    left: 64px;
+    border: None;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    font-family: Outfit;
+    font-size: 15px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.quantity button:hover{
+    background-color: #b8aaaa;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.remove-btn{
+    position: absolute;
+    border-radius: 5px;
+    border: none;
+    font-family: Outfit;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    top: 125px;
+    right: 150px;
+}
+
+.remove-btn:hover{
+    background-color: #fffafa;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+}
+
+.extra-input{
+    position:relative;
+    top: 180px;
+    width: 530px;
+    height: 220px;
+}
+
+.optional-note{
+    position: absolute;
+    top: 0px;
+}
+
+.optional-note textarea{
+    position: absolute;
+    font-size: 13px;
+    outline: none;
+    border: 0px solid rgb(200, 200, 200);
+    background: #ffffff;
+    border-radius: 3px;
+    width: 310px;
+    height: 140px;
+    padding: 15px;
+    font-family: Outfit;
+    resize: none;
+    box-shadow: 0px 2px 3px 0px rgba(177, 177, 177, 0.5) inset;
+}
+
+.coupon-container{
+    position: absolute;
+    top: 0px;
+    right: 50px;
+}
+
+.coupon-container input{
+    position: absolute;
+    border: none;
+    box-shadow: 0px 2px 3px 0px rgba(177, 177, 177, 0.5) inset;
+    height: 30px;
+    width: 100px;
+    font-family: Outfit;
+    padding-left: 10px;
+    right: 0px;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.coupon-container button{
+    position: absolute;
+    border: none;
+    box-shadow: 0px 2px 3px 0px rgba(77, 77, 77, 0.5) inset;
+    height: 32px;
+    width: 50px;
+    font-family: Outfit;
+    padding-left: 10px;
+    font-size: 10px;
+    cursor: pointer;
+    background: #CF8181;
+    color: white;
+    border-radius: 0 3px 3px 0;
+}
+
+.coupon-container button:hover{
+    background: #965a5a;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+.checkout-cost {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    top: 100px;
+    right: 5px;
+    transform: translate(0, -50%);
+}
+
+.checkout-cost h4{
+    font-size: 16px;
+    color: black;
+}
+
+.item-total{
+    position: relative;
+    width: 190px;
+    height: 20px;
+}
+
+.discount{
+    position: relative;
+    width: 190px;
+    height: 20px;
+    top: -10px;
+}
+
+.line-div{
+    position: relative;
+    background: #C8B5B5;
+    width: 100%;
+    height: 2px;
+}
+
+.subtotal{
+    position: relative;
+    width: 190px;
+    height: 20px;
+    top: -15px;
+}
+
+.shipping{
+    position: relative;
+    width: 190px;
+    height: 20px;
+    top: -30px;
+}
+
+.tax{
+    position: relative;
+    width: 190px;
+    height: 20px;
+    top: -25px;
+}
+
+.subtext{
+    position: relative;
+    font-size: 10px;
+    left: 10px;
+    top: -20px;
+}
+
+.total{
+    position: relative;
+    width: 190px;
+    height: 20px;
+    top: -10px;
+}
+
+.money-cost{
+    text-align: right;
+    width: fit-content;
+    position: absolute;
+    top: -13px;
+    right: 0px;
+    font-size: 14px;
+}
+
+.checkout-btn{
+    position: relative;
+    width: 100%;
+    height: 27px;
+    font-family: Outfit;
+    color: white;
+    border-radius: 15px;
+    background: #CF8181;
+    box-shadow: 2px 2px 3px 0px rgba(105, 105, 105, 0.1);
+    border: none;
+    cursor: pointer;
+}
+
+.checkout-btn:hover{
+    background: #965a5a;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.empty-cart-message{
+    position: absolute;
+    text-align: center;
+    top: 0px;
+}
+
+.empty-cart-message p{
+    font-family: Racing Sans One;
+    font-size: 30px;
+}
+
+.subscribe {
+    position: relative;
+    align-items: center;
+    max-width: 100%;
+    top: 30px;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+}
+
+.subscribe-image {
+    display: block;
+    position: absolute; 
+    z-index: -1;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    filter: saturate(110%) contrast(110%);
+    object-fit: cover;
+    top: -5%;
+}
+
+.toner{
+    position: absolute;
+    top: -5%;
+    opacity: 0.4;
+    width: 100%;
+    height: 450px;
+    flex-shrink: 0;
+    background: #102252;
+    mix-blend-mode: multiply;
+    align-items: center;
+}
+
+.service-text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 20px;
+}
+
+.subscribe a {
+    position: relative;
+    margin: 0px 20px 0 20px;
+    right: -260px;
+}
+
+.subscribe p {
+    position: relative;
+    color: white;
+    font-size: 14px;
+    left: -130px;
+    width: fit-content;
+}
+
+.footer-line {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    bottom: -80px;
+    background-color: white;
+    box-shadow: 0px 3px 3px rgba(121, 121, 121, 0.25);
+}
+
+.footer-name {
+    position: relative;
+    width: 50%;
+    scale: 80%;
+    color: white;
+    bottom: -90px;
+}
+
+.subscribe a:hover{
+    text-decoration: underline;
+    color: white;
+}

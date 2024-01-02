@@ -12,6 +12,21 @@
     z-index: 100;
 } 
 
+.curr-page{
+    position: absolute;
+    z-index: -1;
+    width: 115px;
+    height: 70px;
+    flex-shrink: 0;
+    background-color: #f5d4d4;
+    transition: all .5s ease 0s;
+    box-shadow: 3px 2px 3px 0px rgba(110, 110, 110, 0.1);
+    left: -278px;
+    top: -40px;
+    border-radius: 3px;
+    transform: skew(-20deg);
+}
+
 /* rest of header information in general.css */
 
 .background{
@@ -64,23 +79,172 @@
     width: 100%;
 }
 
-.shop{
-    position:relative;
+.shop-headers{
+    position: relative;
     width: 100%;
     height: 500px;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .category{
     position: absolute;
-    width: 900px;
+    width: 800px;
     height: 100px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0px;
 }
 
 .category h1{
     text-align: left;
-    left: -450px;
+    color: #410000;
+}
+
+#subnavi{
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    top: 100px;
+    width: 100%;
+    min-width: 900px;
+    height: 60px;
+    background-color: #C5DDFF;
+    box-shadow: 0px 3px 3px 0px rgba(48, 33, 33, 0.10);
+}
+
+.container-menu{
+    position: relative;
+    width: 900px;
+    height: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    scale: 90%;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container-menu button{
+    border: 2px black;
+    background-color: transparent;
+    font-family: Outfit;
+    color: #410000;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-left: 5px;
+    padding-left: 20px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.curr-category{
+    position: absolute;
+    z-index: -1;
+    width: 80px;
+    height: 60px;
+    flex-shrink: 0;
+    transform: skew(-20deg);
+    background-color: #CFF6FF;
+    filter: drop-shadow(0px 3px 3px rgba(56, 56, 56, 0.2));
+    transition: all .5s ease 0s;
+    top: -10px;
+}
+
+
+.shop-content{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    top: 970px;
+}
+
+.items{
+    position: relative;
+    max-width: 900px;
+    height: 300px;
+    top: 0px;
+}
+
+.items button{
+    width: 171px;
+    height: 255px;
+    background: #FFF;
+    box-shadow: 2px 3px 3px 0px rgba(145, 145, 145, 0.2);
+    border: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 25px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.container-img{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.items img{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bobaCat{
+    transform: scale(200%) translate(5px, 10px);
+    filter: saturate(110%) sepia(10%);
+}
+
+.bunny{
+    transform: scale(140%);
+}
+
+.owl{
+    transform: scale(250%) translate(-5px, -10px);
+    filter: brightness(110%);
+}
+
+.crow{
+    transform: scale(140%) translate(5px,0);
+    filter: brightness(110%);
+}
+
+.items h6{
+    color: #410000;
+    font-size: 16px;
+    line-height: 100%;
+    margin-top: 15px;
+}
+
+.items p{
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: -30px;
+}
+
+.bobaCat:hover{
+    transform: scale(2.2) translate(5px, 10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.bunny:hover{
+    transform: scale(1.6);
+    transition: transform 0.3s ease-in-out;
+}
+
+.owl:hover{
+    transform: scale(270%) translate(-5px, -10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.crow:hover{
+    transform: scale(160%) translate(5px,0);
+    transition: transform 0.3s ease-in-out;
 }
