@@ -3,18 +3,18 @@
 //or alternatively u can leave the general animation in and play around with the cool animation
 //for the main photo part that ppl see. :)
 
-document.addEventListener('scroll', onScroll);
-
-function onScroll () {
-    var scrollPosition = window.scrollY,
-        showHeaderPosition = 100;
-
-    // Determine if position is at a certain point
-    if (scrollPosition >= showHeaderPosition) {
-        showHeader();
-    } else {
-        hideHeader();
-    }
-}
+document.addEventListener("DOMContentLoaded", function() {
+    var navbar = document.getElementById('main-header');
+    const triggerPos = document.getElementById('menu').getBoundingClientRect().top;
+    navbar.style.opacity = "0";
+    window.onscroll = function() {
+        // Check if the user has scrolled down (you can adjust the threshold as needed)
+        if (window.scrollY > triggerPos) {
+            navbar.style.opacity = "1";
+        } else {
+            navbar.style.opacity = "0";
+        }
+    };
+});
 
 //https://markgoodyear.com/labs/headhesive/
