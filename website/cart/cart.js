@@ -1,147 +1,181 @@
 // https://codepen.io/justinklemm/pen/kyMjjv
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
-    const quantityInput = document.getElementById('inputNum');
-    const increaseButton = document.querySelector('.plus-btn');
-    const decreaseButton = document.querySelector('.minus-btn');
+  const quantityInput = document.querySelector('.qty-input');
+  const increaseButton = document.querySelector('.plus-btn');
+  const decreaseButton = document.querySelector('.minus-btn');
+  const removeButton = document.querySelector('.remove-btn')
+  var fadeTime = 300;
 
-    increaseButton.addEventListener('click', function() {
-      updateQuantity(1);
-    });
-
-    decreaseButton.addEventListener('click', function() {
-      updateQuantity(-1);
-    });
-
-    function updateQuantity(change) {
-      let currentQuantity = parseInt(quantityInput.value, 10);
-      currentQuantity += change;
-
-      // Ensure quantity is not negative
-      currentQuantity = Math.max(1, currentQuantity);
-
-      quantityInput.value = currentQuantity;
-    }
+  // addEventListeners to check when user interacts w/ element
+  increaseButton.addEventListener('click', function() {
+    updateQtyBtn(1);
+    
   });
+
+  decreaseButton.addEventListener('click', function() {
+    updateQtyBtn(-1);
+  });
+
+  quantityInput.addEventListener('change', function () {
+    const newQuantity = parseInt(this.value, 10);
+    const cartItem = this.closest('.cart-item');
+    const costItem = cartItem.querySelector('.cost-item-total');
+    updateItemCost(costItem, newQuantity);
+});
+
+  function updateQtyBtn(qtyInput) {
+    /**
+     * update the value of the input when pressing the increase decrease buttons
+     * 
+     * input:
+     *  -qtyInput: which is the quantity that it should increase by
+     */
+    let currentQuantity = parseInt(quantityInput.value, 10);
+    currentQuantity += qtyInput;
+
+    // Ensure quantity is greater than 0
+    currentQuantity = Math.max(1, currentQuantity);
+
+    quantityInput.value = currentQuantity;
+    const cartItem = quantityInput.closest('.cart-item');
+    const costItem = cartItem.querySelector('.cost-item-total');
+    updateItemCost(costItem, currentQuantity)
+  }
+  
+  function updateItemCost(cost, qty) {
+    /**
+     * update the total item cost based on the quantity
+     * 
+     * inputs:
+     *  -cost: the location of the cost to be updated
+     *  - qty: the new quantity (an int)
+     */
+    let productCostTotal = 0;
+    const perCost = cost.nextElementSibling.textContent;
+    const perCostValue = parseFloat(perCost.slice(3,9));
+    productCostTotal = qty * perCostValue;
+    cost.innerHTML = "$" + productCostTotal.toFixed(2);
+  }
 
   function recalculateCart(){
 
-  }
-
-  function updateQty(qtyInput){
-    
   }
 
   function removeItem(removeButton){
     
   }
 
+  });
 
-  // document.addEventListener("DOMContentLoaded", function() {
-  //   const items = [
-  //     { id: 1, name: 'Item 1', price: 10, quantity: 1 },
-  //     { id: 2, name: 'Item 2', price: 15, quantity: 1 },
-  //     { id: 3, name: 'Item 3', price: 20, quantity: 1 }
-  //   ];
 
-  //   const cartContainer = document.getElementById('cart-container');
-  //   const couponInput = document.getElementById('coupon-input');
-  //   const applyButton = document.getElementById('apply-btn');
-  //   const totalCostElement = document.getElementById('total-cost');
+// document.addEventListener("DOMContentLoaded", function() {
+//   const items = [
+//     { id: 1, name: 'Item 1', price: 10, quantity: 1 },
+//     { id: 2, name: 'Item 2', price: 15, quantity: 1 },
+//     { id: 3, name: 'Item 3', price: 20, quantity: 1 }
+//   ];
 
-  //   // Render initial cart items
-  //   renderCart();
+//   const cartContainer = document.getElementById('cart-container');
+//   const couponInput = document.getElementById('coupon-input');
+//   const applyButton = document.getElementById('apply-btn');
+//   const totalCostElement = document.getElementById('total-cost');
 
-  //   applyButton.addEventListener('click', function() {
-  //     applyCoupon();
-  //   });
+//   // Render initial cart items
+//   renderCart();
 
-  //   function renderCart() {
-  //     cartContainer.innerHTML = '';
+//   applyButton.addEventListener('click', function() {
+//     applyCoupon();
+//   });
 
-  //     items.forEach(item => {
-  //       const itemElement = document.createElement('div');
-  //       itemElement.classList.add('cart-item');
+//   function renderCart() {
+//     cartContainer.innerHTML = '';
 
-  //       const itemName = document.createElement('span');
-  //       itemName.textContent = item.name;
+//     items.forEach(item => {
+//       const itemElement = document.createElement('div');
+//       itemElement.classList.add('cart-item');
 
-  //       const qtyContainer = document.createElement('div');
-  //       qtyContainer.classList.add('qty-container');
+//       const itemName = document.createElement('span');
+//       itemName.textContent = item.name;
 
-  //       const decreaseBtn = document.createElement('button');
-  //       decreaseBtn.textContent = '-';
-  //       decreaseBtn.addEventListener('click', function() {
-  //         updateQuantity(item.id, -1);
-  //       });
+//       const qtyContainer = document.createElement('div');
+//       qtyContainer.classList.add('qty-container');
 
-  //       const qtyInput = document.createElement('input');
-  //       qtyInput.classList.add('qty-input');
-  //       qtyInput.type = 'text';
-  //       qtyInput.value = item.quantity;
-  //       qtyInput.readOnly = true;
+//       const decreaseBtn = document.createElement('button');
+//       decreaseBtn.textContent = '-';
+//       decreaseBtn.addEventListener('click', function() {
+//         updateQuantity(item.id, -1);
+//       });
 
-  //       const increaseBtn = document.createElement('button');
-  //       increaseBtn.textContent = '+';
-  //       increaseBtn.addEventListener('click', function() {
-  //         updateQuantity(item.id, 1);
-  //       });
+//       const qtyInput = document.createElement('input');
+//       qtyInput.classList.add('qty-input');
+//       qtyInput.type = 'text';
+//       qtyInput.value = item.quantity;
+//       qtyInput.readOnly = true;
 
-  //       const removeBtn = document.createElement('button');
-  //       removeBtn.textContent = 'Remove';
-  //       removeBtn.addEventListener('click', function() {
-  //         removeItem(item.id);
-  //       });
+//       const increaseBtn = document.createElement('button');
+//       increaseBtn.textContent = '+';
+//       increaseBtn.addEventListener('click', function() {
+//         updateQuantity(item.id, 1);
+//       });
 
-  //       qtyContainer.appendChild(decreaseBtn);
-  //       qtyContainer.appendChild(qtyInput);
-  //       qtyContainer.appendChild(increaseBtn);
+//       const removeBtn = document.createElement('button');
+//       removeBtn.textContent = 'Remove';
+//       removeBtn.addEventListener('click', function() {
+//         removeItem(item.id);
+//       });
 
-  //       itemElement.appendChild(itemName);
-  //       itemElement.appendChild(qtyContainer);
-  //       itemElement.appendChild(removeBtn);
+//       qtyContainer.appendChild(decreaseBtn);
+//       qtyContainer.appendChild(qtyInput);
+//       qtyContainer.appendChild(increaseBtn);
 
-  //       cartContainer.appendChild(itemElement);
-  //     });
+//       itemElement.appendChild(itemName);
+//       itemElement.appendChild(qtyContainer);
+//       itemElement.appendChild(removeBtn);
 
-  //     updateTotalCost();
-  //   }
+//       cartContainer.appendChild(itemElement);
+//     });
 
-  //   function updateQuantity(itemId, change) {
-  //     const item = items.find(item => item.id === itemId);
+//     updateTotalCost();
+//   }
 
-  //     if (item) {
-  //       item.quantity += change;
-  //       item.quantity = Math.max(1, item.quantity);
-  //       renderCart();
-  //     }
-  //   }
+//   function updateQuantity(itemId, change) {
+//     const item = items.find(item => item.id === itemId);
 
-  //   function removeItem(itemId) {
-  //     const index = items.findIndex(item => item.id === itemId);
+//     if (item) {
+//       item.quantity += change;
+//       item.quantity = Math.max(1, item.quantity);
+//       renderCart();
+//     }
+//   }
 
-  //     if (index !== -1) {
-  //       items.splice(index, 1);
-  //       renderCart();
-  //     }
-  //   }
+//   function removeItem(itemId) {
+//     const index = items.findIndex(item => item.id === itemId);
 
-  //   function applyCoupon() {
-  //     const enteredCoupon = couponInput.value.trim();
-  //     const validCouponCode = "SALE2023"; // Replace with your valid coupon code
+//     if (index !== -1) {
+//       items.splice(index, 1);
+//       renderCart();
+//     }
+//   }
 
-  //     if (enteredCoupon === validCouponCode) {
-  //       // Apply coupon discount or perform other coupon-related logic
-  //       alert('Coupon applied successfully!');
-  //     } else {
-  //       alert('Invalid coupon code. Please try again.');
-  //     }
-  //   }
+//   function applyCoupon() {
+//     const enteredCoupon = couponInput.value.trim();
+//     const validCouponCode = "SALE2023"; // Replace with your valid coupon code
 
-  //   function updateTotalCost() {
-  //     const totalCost = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  //     totalCostElement.textContent = `Total Cost: $${totalCost}`;
-  //   }
-  // });
+//     if (enteredCoupon === validCouponCode) {
+//       // Apply coupon discount or perform other coupon-related logic
+//       alert('Coupon applied successfully!');
+//     } else {
+//       alert('Invalid coupon code. Please try again.');
+//     }
+//   }
+
+//   function updateTotalCost() {
+//     const totalCost = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+//     totalCostElement.textContent = `Total Cost: $${totalCost}`;
+//   }
+// });
 
 

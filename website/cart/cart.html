@@ -106,20 +106,41 @@
                         </div>
                         <div class="info">
                             <h3 id="objName" class="name">BOBA CAT ENAMEL PIN</h3>
-                            <p id="description">
+                            <p id="description" class="des">
                                 1.5 inch Gold Plated Hard Enamel Pin of a Cat Drinking Boba (2 rubber backings)
                             </p>
-                            <p id="cost">$11.50</p>
+                            <p class="cost-item-total">$11.50</p>
+                            <p class="per-item-cost">&#40; $11.50 per item &#41;</p>
                         </div>
-                        <div id="quantityInput" class="quantity">
+                        <div class="quantity">
                             <button class="minus-btn"  type="button">-</button>
-                            <input class="qty-input" name ="qty" id="inputNum" type="number" value="1">
+                            <input class="qty-input" name ="qty" type="number" value="1">
                             <button class="plus-btn"  type="button">+</button>
                         </div>
                         <button class="remove-btn" >Remove</button>
-                        
-                        <p id="result-message"></p>
+                
                     </div>
+
+                    <div class="cart-item" id="cartItem2">
+                        <div class="img-container">
+                            <img src="../shop/product-images/frog.png">
+                        </div>
+                        <div class="info">
+                            <h3 class="name">FROG STICKER</h3>
+                            <p class="des">
+                                2.5 Waterproof matte vinyl mad fire frog sticker
+                            </p>
+                            <p class="cost-item-total">$2.50</p>
+                            <p class="per-item-cost">&#40; $2.50 per item &#41;</p>
+                        </div>
+                        <div class="quantity">
+                            <button class="minus-btn"  type="button">-</button>
+                            <input class="qty-input" name ="qty" type="number" value="1">
+                            <button class="plus-btn"  type="button">+</button>
+                        </div>
+                        <button class="remove-btn" >Remove</button>
+                    </div>
+
                     <div class="extra-input">
                         <div class="optional-note">
                             <textarea id="messageInput" class="message" name="message" placeholder="Add an Optional Note"></textarea>
@@ -127,11 +148,12 @@
                         <div class="coupon-container">
                             <input type="text" id="coupon-input" placeholder="Coupon Code">
                             <button id="apply-btn">Apply</button>
+                            <p id="result-message"></p>
                         </div>
                     </div>
-                    <div id="empty-cart-message">
+                    <!-- <div id="empty-cart-message">
                         <p>No Items in the Cart</p>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="checkout-cost">
