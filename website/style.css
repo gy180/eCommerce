@@ -85,7 +85,7 @@ p{
     }
 }
 
-body, header {
+body, header, .main-header{
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -200,19 +200,6 @@ a{
     border-radius: 3px; */
 }
 
-#searchBar label{
-    font-family: Outfit;
-    font-size: 90%;
-    position: absolute;
-    left: 0;
-    padding: 0.8em;
-    margin-left: 0.5em;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    color: rgb(100, 100, 100);
-    left: 115px;
-}
-
 #searchBar :is(input:focus, input:valid) {
     border-color: rgb(200, 150, 152);
 }
@@ -295,20 +282,20 @@ a{
     font-weight: 400;
 } 
 
-.service-text {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 20px;
-}
-
 .sub-email {
     position: relative;
     align-items: center;
     justify-content: center;
     display: flex;
-    top: 10px;
+    top: 40px;
+}
+
+.sub-email form{
+    position: absolute;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .sub-email input{
@@ -343,6 +330,23 @@ a{
     left: 10px;
 }
 
+#enterEmail{
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    right: 0;
+}
+
+
+.policies {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 80px;
+}
+
 .subscribe a {
     position: relative;
     margin: 0px 20px 0 20px;
@@ -353,16 +357,16 @@ a{
     font-size: 14px;
 }
 
-.subscribe-icons {
+.socials-icons {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     scale: .7;
-    top: 40px;
+    top: 80px;
 }
 
-.subscribe-icons a {
+.socials-icons a {
     position: relative;
     margin: -15 20px 0 20px;
 }
@@ -371,7 +375,7 @@ a{
     position: relative;
     width: 100%;
     height: 3px;
-    bottom: -80px;
+    bottom: -130px;
     background-color: white;
     box-shadow: 0px 3px 3px rgba(121, 121, 121, 0.25);
 }
@@ -381,19 +385,10 @@ a{
     width: 50%;
     scale: 80%;
     color: white;
-    bottom: -90px;
+    bottom: -140px;
 }
 
 .subscribe a:hover{
     text-decoration: underline;
     color: white;
-}
-
-#enterEmail{
-    position: absolute;
-    border: none;
-    background-color: transparent;
-    right: 430px;
-    bottom: 5px;
-    cursor: pointer;
 }
