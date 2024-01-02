@@ -74,43 +74,86 @@
 
         <main>
             <section class="item-info">
-                <div class="photos">
-                    <div class="img1">
-
+                <div class="container-info">
+                    <div class="photos">
+                        <div class="img1">
+                            <img src="../shop/product-images/cat.png" alt="">
+                        </div>
+                        <div class="img2">
+                            <img src="../shop/product-images/bobacat2.png" alt="">
+                        </div>
+                        <div class="img3">
+                            <img src="../shop/product-images/bobacat3.png" alt="">
+                        </div>
                     </div>
-                    <div class="img2">
-
+                    <div class="item-about">
+                        <h5 class="category-item">ENAMEL PINS</h5>
+                        <h2 class="item-name">Boba Cat Pin</h2>
+                        <h4 class="cost">$11.50 USD</h4>
+                        <p>Shipping calculated at checkout</p>
                     </div>
-                    <div class="img3">
-
+                    <div class="quantity">
+                        <p>Quantity:</p>
+                        <div class="quantity-inputs">
+                            <button id="minus">-</button>
+                            <input class="input-num" name ="qty" type="number" value="1">
+                            <button id="plus">+</button>
+                        </div>
                     </div>
-                </div>
-                <div class="item-about">
-                    <h5 class="category-item">C ategory</h5>
-                    <h2 class="item-name">Title</h2>
-                    <h4 class="cost"></h4>
-                    <p>Shipping calculated at checkout</p>
-                </div>
-                <div id="quantity">
-                    <button id="minus">-</button>
-                    <input id="quantity-input" type="number" min="1" max="20" value="1">
-                    <button id="plus">+</button>
-                </div>
-                <div class="descriptions">
-                    <h6 class="des-title"></h6>
-                    <p class="d es-info"></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="descriptions">
+                        <h6 class="des-title">Description</h6>
+                        <p class="d es-info">
+                            Size: 32mm width x 40mm height (1.5inch pin)
+                            <br><br>
+                            Materials: Gold plated hard enamel, Secured with 2 rubber backings.
+                            <BR><br>
+                            Please keep in mind all pins can not be 100% perfect since they are handmade items. 
 
-                    <h6 class="shipping-title"></h6>
-                    <p class="shipping-info"></p>
+                        </p>
+
+                        <h6 class="shipping-title">Shipping</h6>
+                        <p class="shipping-info">
+                            Orders will ship within 3-7 business days (Free Shipping on orders of $35.00 or more).
+                            <br><br> Orders will either be in a bubble mailer or box, depends on the order size.
+                        </p>
+                    </div>
                 </div>
             </section>
             <section class="recommendations">
-                <h2>You May Also Like </h2>
-                <div id="rec1">
-
+                <div class="container-rec">
+                    <h2>You May Also Like </h2>
+                    <div class="items">
+                        <button class="product1" onclick="redirectPage('../product_des/item.html')">
+                            <div class="container-img">
+                                <img src="../shop/product-images/cat.png" class="bobaCat">
+                            </div>
+                            <h6>Boba Cat Pin</h6>
+                            <p>$11.50</p>
+                        </button>
+                        <button class="product2" onclick="redirectPage('../product_des/item.html')">
+                            <div class="container-img">
+                                <img src="../shop/product-images/bunbun.jpg" class="bunny">
+                            </div>
+                            <h6>Mad Bunny Pin</h6>
+                            <p>$11.00</p>
+                        </button>
+                        <button class="product3" onclick="redirectPage('../product_des/item.html')">
+                            <div class="container-img">
+                                <img src="../shop/product-images/owl.jpg" class="owl">
+                            </div>
+                            <h6>Book Owl Pin</h6>
+                            <p>$11.50</p>
+                        </button>
+                        <button class="product4" onclick="redirectPage('../product_des/item.html')">
+                            <div class="container-img">
+                                <img src="../shop/product-images/crow.jpg" class="crow">
+                            </div>
+                            <h6>GentleCrow Pin</h6>
+                            <p>$10.50</p>
+                        </button>
+                    </div>
                 </div>
-                <div class="rec2"></div>
-                <div class="rec3"></div>
             </section>
         </main>
         <footer class="subscribe">
@@ -162,5 +205,6 @@
         </footer>
         
         <script src="../general.js"></script>
+        <script src="item.js"></script>
     </body>
 </html>
