@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 550px;
+    height: 650px;
     position: relative;
 }
 
@@ -35,7 +35,6 @@
     align-items: center;
     justify-content: center;
     width: 850px;
-    height: 300px;
     margin: 0 auto;
 }
 
@@ -48,10 +47,10 @@
 }
 
 .cart-items{
-    position: relative;
+    position: absolute;
     top: 20px;
     width: 550px;
-    height: 400px;
+    height: 500px;
     flex-shrink: 0;
     background: #DBEAFF;
     box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -60,12 +59,11 @@
     padding-left: 40px;
 }
 
-.info{
-    position: absolute;
-    width: 500px;
-    text-align: justify;
+.cart-item{
+    position: relative;
+    width: 525px;
+    height: 140px;
 }
-
 .img-container{
     position: absolute;
     width: 150px;
@@ -84,33 +82,49 @@
 
 .info{
     position: absolute;
-    left: 190px;
-    top: 3px;
+    width: 500px;
+    height: 140px;
+    text-align: justify;
+    
+    left: 145px;
+    top: -12px;
     scale: 0.8;
-    width: fit-content;
-    height: fit-content;
+    width: 425px;
+    height: 140px;
 }
 
-#description{
+.name{
+    position: absolute;
+    top: -20px;
+}
+
+.des{
     position: absolute;
     width: 270px;
-    top: 60px;
+    top: 40px;
     text-align: justify;
 }
 
-#cost{
+.cost-item-total{
     position: absolute;
     font-size: 20px;
-    right: -120px;
-    top: 20px;
+    right: 0px;
+    top: -5px;
     font-weight: 400;
 }
 
+.per-item-cost{
+    position: absolute;
+    font-size: 12px;
+    right: 0px;
+    top: 30px;
+    font-weight: 300;
+}
 
 .quantity{
     position: relative;
     top: 85px;
-    left: 180px;
+    left: 188px;
     border: 1px solid #41000086;
     width: 84px;
     height: 20px;
@@ -167,13 +181,14 @@
     height: 20px;
     background-color: transparent;
     cursor: pointer;
-    top: 125px;
-    right: 150px;
+    top: 85px;
+    right: 0px;
 }
 
 .remove-btn:hover{
-    background-color: #fffafa;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: #d48585ab;
+    color: white;
+    transition: all 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -190,7 +205,7 @@ input[type=number] {
 
 .extra-input{
     position:relative;
-    top: 180px;
+    top: 35px;
     width: 530px;
     height: 220px;
 }
