@@ -368,18 +368,90 @@ nav h6:hover{
     bottom: 70px;
 }
 
-.contact-us {
+.contact-us-link{
     position: absolute;
-    scale: 55%;
-    left: 80px;
-    bottom: -250px;
+    left: 125px;
+    top: 210px;
+    white-space: nowrap;
+    border:none;
+    background-color: #A26262;
+    border-radius: 25px;
+    width: 150px;
+    height: 27px;
+    cursor: pointer;
+    box-shadow: 2px 3px 3px 0px rgba(85, 52, 52, 0.16);
+}
+
+.contact-us{
+    position: absolute;
+    border: none;
+    font-family: Outfit;
+    padding: 3px;
+    color: white;
+    font-size: 13px;
+    background-color: transparent;
+    top: 2px;
+    left: 25px;
+    font-weight: 400px;
+    cursor: pointer;
+}
+
+.contact-us-link svg{
+    position: absolute;
+    right:20px;
+    top: 5px;
+}
+
+.contact-us-link svg path{
+    position: absolute;
+    fill:white;
+    scale: .7;
+}
+
+.contact-us-link:hover{
+    transition: background-color 0.3s ease-in-out;
+    background-color:  #7e4242;;
 }
 
 .more-info {
     position: absolute;
-    scale: 55%;
-    left: 250px;
-    bottom: -250px;
+    right: 70px;
+    top: 210px;
+    white-space: nowrap;
+    border:none;
+    background-color: #ffffff;
+    border-radius: 25px;
+    width: 150px;
+    height: 27px;
+    cursor: pointer;
+    box-shadow: 2px 3px 3px 0px rgba(85, 52, 52, 0.16);
+}
+
+.more-info button{
+    position: absolute;
+    border: none;
+    font-family: Outfit;
+    padding: 3px;
+    color: black;
+    font-size: 13px;
+    background-color: transparent;
+    top: 2px;
+    left: 35px;
+    font-weight: 400px;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.more-info svg{
+    position: absolute;
+    right:20px;
+    top: 3px;
+    scale: .7;
+}
+
+.more-info:hover{
+    background-color: rgb(196, 188, 188);
+    transition: all 0.3s ease-in-out;
 }
 
 .logo-about{

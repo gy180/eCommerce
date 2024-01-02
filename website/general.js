@@ -1,3 +1,9 @@
+
+/**
+ * change to HTTPS when possible :)
+ * https://github.com/webisora/vscode-liveserver-https
+ */
+
 // animation basics
 document.addEventListener('DOMContentLoaded', function() {
     document.body.style.opacity = 1; // Set opacity to 1 to trigger the fade-in animation
