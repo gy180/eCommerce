@@ -223,14 +223,6 @@ a{
     bottom: 13px;
     scale: 80%;
 }
-.subscribe {
-    position: relative;
-    align-items: center;
-    max-width: 100%;
-    top: 1525px;
-    width: 100%;
-    height: 300px;
-}
 
 .subscribe-image {
     display: block;
@@ -391,4 +383,12 @@ a{
 .subscribe a:hover{
     text-decoration: underline;
     color: white;
+}
+
+.subscribe {
+    position: relative;
+    align-items: center;
+    top: auto;
+    width: 100%;
+    height: 300px;
 }

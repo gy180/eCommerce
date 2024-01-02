@@ -481,3 +481,11 @@ a{
 .links p:hover{
     text-decoration: underline;
 }
+
+.subscribe {
+    position: relative;
+    align-items: center;
+    top: 1525px;
+    width: 100%;
+    height: 300px;
+}

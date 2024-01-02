@@ -67,7 +67,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 550px;
+    height: 250px;
 }
 
 .contact h1{
@@ -177,6 +177,7 @@
     border: None;
     align-items: center;
     top: 370px;
+    cursor: pointer;
 }
 
 #submitButton h5{
@@ -185,6 +186,11 @@
     color: white;
     line-height: 80%;
     margin-top: 13px;
+}
+
+#submitButton:hover{
+    background-color: #8a4a4a;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 #inputs :is(input:focus, input:valid)~label {
