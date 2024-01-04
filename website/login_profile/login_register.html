@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login/Register</title>
+        <link rel = "icon" href = "../images/logo2.png" >
+        <link rel="stylesheet" href="../style.css" type="text/css" media="only screen">
+        <link rel="stylesheet" href="login_register.css" type="text/css" media="only screen">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <style type="text/css"></style>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Racing+Sans+One&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    </head>
+    <body>
+        <main>
+            <div class="login" id="loginPage">
+                <h2 class="loginText"><strong>Login</strong></h2>
+                <div class="usernameInfo">
+                    <h2 class="usernameText">Username: </h2>
+                    <form id="loginInfo">
+                        <input id="userInput" type="text" name="user" required="" autocomplete="off">
+                    </form>
+                </div>
+                <div class="passwordInfo">
+                    <h2 class="passwordText">Password: </h2>
+                    <form id="loginPassword">
+                        <input id="passwordInput" type="text" name="password" required="" autocomplete="off">
+                    </form>
+                </div>
+                <div class="loginRegisterInputs">
+                    <button id="loginButton" type="submit">
+                        <h2>Login</h2>
+                    </button>
+                    <p id="changeToRegister">Register</p>
+                </div>
+            </div>
+
+            <div class="register" id="registerPage">
+                <h2 class="registerText"><strong>Register</strong></h2>
+                <div class="newUsernameInfo">
+                    <h2 class="newUsernameText">New Username: </h2>
+                    <form id="newUserInfo">
+                        <input id="newUserInput" type="text" name="newUser" required="" autocomplete="off">
+                    </form>
+                </div>
+                <div class="newPasswordInfo">
+                    <h2 class="newPasswordText">New Password: </h2>
+                    <form id="newPassword">
+                        <input id="newPasswordInput" type="text" name="newPassword" required="" autocomplete="off">
+                    </form>
+                </div>
+                <div class="loginRegisterInputs">
+                    <button id="registerButton" type="submit">
+                        <h2>Register</h2>
+                    </button>
+                    <p id="changeToLogin">Login</p>
+                </div>
+            </div>
+
+        </main>
+        <script src="../general.js"></script>
+        <script src="./login_register.js"></script>
+    </body>
+</html>
