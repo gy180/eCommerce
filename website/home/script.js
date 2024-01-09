@@ -7,12 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
     var navbar = document.getElementById('main-header');
     const triggerPos = document.getElementById('menu').getBoundingClientRect().top;
     navbar.style.opacity = "0";
+    navbar.style.pointerEvents = "none";
+
     window.onscroll = function() {
         // Check if the user has scrolled down (you can adjust the threshold as needed)
         if (window.scrollY > triggerPos) {
             navbar.style.opacity = "1";
+            navbar.style.pointerEvents = "auto";
         } else {
             navbar.style.opacity = "0";
+            navbar.style.pointerEvents = "none";
+
         }
     };
 });
