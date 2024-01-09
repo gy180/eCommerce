@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const decreaseButton = document.querySelectorAll('.minus-btn');
   const removeButton = document.querySelectorAll('.remove-btn')
   var fadeTime = 300;
+  recalculateCart();
 
   // addEventListeners to check when user interacts w/ element
   increaseButton.forEach(function(button) {
@@ -25,9 +26,18 @@ document.addEventListener("DOMContentLoaded", function() {
       const newQuantity = parseInt(this.value, 10);
       const cartItem = this.closest('.cart-item');
       const costItem = cartItem.querySelector('.cost-item-total');
-
       updateItemCost(costItem, newQuantity);
     });
+
+    removeButton.forEach(function(button) {
+      button.addEventListener('click', function() {
+        const itemToRemove = this.closest('.cart-item');
+        console.log(itemToRemove);
+        itemToRemove.remove();
+        recalculateCart();
+      })
+      
+    })
   });
 
   function updateQtyBtn(clickedButton, qtyInput) {
@@ -63,16 +73,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const perCostValue = parseFloat(perCost.slice(3,9));
     productCostTotal = qty * perCostValue;
     cost.innerHTML = "$" + productCostTotal.toFixed(2);
+    recalculateCart();
   }
 
   function recalculateCart(){
-
+    const quantityInput = document.querySelectorAll('.cost-item-total');
+    const discount = document.querySelector('.discount');
+    const discountCost = discount.querySelector('.money-cost');
+    let total = 0.0;
+    quantityInput.forEach((element) => {
+      total = total + parseFloat(element.textContent.substring(1));
+    })
+    const itemTotal = document.querySelector('.item-total');
+    const itemCost = itemTotal.querySelector('.money-cost');
+    itemCost.innerHTML = "$" + total.toFixed(2);
+    const subtotal = document.querySelector('.subtotal');
+    const subtotalCost = subtotal.querySelector('.money-cost');
+    let value = total.toFixed(2) - parseFloat(discountCost.textContent.substring(1)).toFixed(2);
+    subtotalCost.innerHTML = "$" + value.toFixed(2);
   }
-
-  function removeItem(removeButton){
-    
-  }
-
 
   });
 
