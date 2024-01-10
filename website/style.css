@@ -340,9 +340,9 @@ a{
     border: none;
     background-color: transparent;
     cursor: pointer;
-    right: 0;
+    right: 5px;
+    scale: .8;
 }
-
 
 .policies {
     position: relative;
