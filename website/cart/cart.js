@@ -28,17 +28,17 @@ document.addEventListener("DOMContentLoaded", function() {
       const costItem = cartItem.querySelector('.cost-item-total');
       updateItemCost(costItem, newQuantity);
     });
-
-    removeButton.forEach(function(button) {
-      button.addEventListener('click', function() {
-        const itemToRemove = this.closest('.cart-item');
-        console.log(itemToRemove);
-        itemToRemove.remove();
-        recalculateCart();
-      })
-      
-    })
   });
+
+  removeButton.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const itemToRemove = this.closest('.cart-item');
+      console.log(itemToRemove);
+      itemToRemove.remove();
+      recalculateCart();
+    })
+    
+  })
 
   function updateQtyBtn(clickedButton, qtyInput) {
     /**

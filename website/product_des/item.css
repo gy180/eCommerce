@@ -1,17 +1,3 @@
-#main-header{
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 70px;
-    width: 100%;
-    min-width: 900px;
-    height: 75px;
-    background-color: white;
-    box-shadow: 0px 3px 3px 0px rgba(48, 33, 33, 0.10);
-    z-index: 100;
-} 
-
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -154,7 +140,7 @@ main{
   position: absolute;
   width: 360px;
   height: 50px;
-  top: 225px;
+  top: 210px;
   right: 0px;
 }
 
@@ -162,7 +148,7 @@ main{
   font-size: 14px;
 }
 
-.quantity-inputs{
+.qty-input{
   position: absolute;
   border: 1px solid black;
   border-radius: 10px;
@@ -206,7 +192,7 @@ main{
   position: absolute;
   width: 360px;
   height: 50px;
-  top: 310px;
+  top: 300px;
   right: 0px;
   border: 1px solid transparent;
   background-color: white;

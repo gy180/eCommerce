@@ -1,20 +1,3 @@
-#main-header{
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 70px;
-    width: 100%;
-    min-width: 900px;
-    height: 75px;
-    background-color: white;
-    box-shadow: 0px 3px 3px 0px rgba(48, 33, 33, 0.10);
-    z-index: 100;
-} 
-
-
-/* rest of header information in general.css */
-
 .main-body{
     margin-top: 100px;
     align-items: center;
@@ -93,9 +76,18 @@
     height: 140px;
 }
 
+.link-des{
+    width: 100%;
+}
+
 .name{
     position: absolute;
     top: -20px;
+}
+
+.name:hover{
+    color: #7b0d0d;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .des{
